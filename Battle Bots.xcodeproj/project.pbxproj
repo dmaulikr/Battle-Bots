@@ -7,81 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70E1067E1B2BF8D1005ED353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1067D1B2BF8D1005ED353 /* AppDelegate.swift */; };
 		70E106981B2BF8D1005ED353 /* Battle_BotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106971B2BF8D1005ED353 /* Battle_BotsTests.swift */; };
-		70E106A21B2BF923005ED353 /* Artillery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106A11B2BF923005ED353 /* Artillery.swift */; };
-		70E106E51B2BF955005ED353 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106A41B2BF954005ED353 /* Attack.swift */; };
-		70E106E61B2BF955005ED353 /* Auto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106A51B2BF954005ED353 /* Auto.swift */; };
-		70E106E71B2BF955005ED353 /* AutoExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106A61B2BF954005ED353 /* AutoExplosion.swift */; };
-		70E106E81B2BF955005ED353 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 70E106A71B2BF954005ED353 /* Base.lproj */; };
-		70E106E91B2BF955005ED353 /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106A81B2BF954005ED353 /* Boundary.swift */; };
-		70E106EA1B2BF955005ED353 /* BulletExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106A91B2BF954005ED353 /* BulletExplosion.swift */; };
-		70E106EB1B2BF955005ED353 /* BulletGuardTurret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106AA1B2BF954005ED353 /* BulletGuardTurret.swift */; };
-		70E106EC1B2BF955005ED353 /* bulletTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106AB1B2BF954005ED353 /* bulletTrail.sks */; };
-		70E106ED1B2BF955005ED353 /* bulletTrailSmall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106AC1B2BF954005ED353 /* bulletTrailSmall.sks */; };
-		70E106EE1B2BF955005ED353 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106AD1B2BF954005ED353 /* Button.swift */; };
-		70E106EF1B2BF955005ED353 /* ChargingStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106AE1B2BF954005ED353 /* ChargingStation.swift */; };
-		70E106F11B2BF955005ED353 /* DamageExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106B01B2BF954005ED353 /* DamageExplosion.swift */; };
-		70E106F21B2BF955005ED353 /* DoorTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106B11B2BF954005ED353 /* DoorTransition.swift */; };
-		70E106F31B2BF955005ED353 /* drillSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106B21B2BF954005ED353 /* drillSparks.sks */; };
-		70E106F41B2BF955005ED353 /* Explosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106B31B2BF954005ED353 /* Explosion.swift */; };
-		70E106F51B2BF955005ED353 /* explosionAutoFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106B41B2BF954005ED353 /* explosionAutoFire.sks */; };
-		70E106F61B2BF955005ED353 /* explosionAutoSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106B51B2BF954005ED353 /* explosionAutoSmoke.sks */; };
-		70E106F71B2BF955005ED353 /* explosionBulletSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106B61B2BF954005ED353 /* explosionBulletSmoke.sks */; };
-		70E106F81B2BF955005ED353 /* FSM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106B71B2BF954005ED353 /* FSM.swift */; };
-		70E106F91B2BF955005ED353 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106B81B2BF954005ED353 /* GameScene.swift */; };
-		70E106FA1B2BF955005ED353 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106B91B2BF954005ED353 /* GameViewController.swift */; };
-		70E106FB1B2BF955005ED353 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106BA1B2BF954005ED353 /* General.swift */; };
-		70E106FC1B2BF955005ED353 /* Guard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106BB1B2BF954005ED353 /* Guard.swift */; };
-		70E106FD1B2BF955005ED353 /* GuardTurret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106BC1B2BF954005ED353 /* GuardTurret.swift */; };
-		70E106FE1B2BF955005ED353 /* Headquarters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106BD1B2BF954005ED353 /* Headquarters.swift */; };
-		70E106FF1B2BF955005ED353 /* HealthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106BE1B2BF954005ED353 /* HealthBar.swift */; };
-		70E107001B2BF955005ED353 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E106BF1B2BF954005ED353 /* Images.xcassets */; };
-		70E107021B2BF955005ED353 /* LevelSelectScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106C11B2BF954005ED353 /* LevelSelectScene.sks */; };
-		70E107031B2BF955005ED353 /* LevelSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106C21B2BF955005ED353 /* LevelSelectScene.swift */; };
-		70E107041B2BF955005ED353 /* LightArmor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106C31B2BF955005ED353 /* LightArmor.swift */; };
-		70E107051B2BF955005ED353 /* MachineGunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106C41B2BF955005ED353 /* MachineGunner.swift */; };
-		70E107061B2BF955005ED353 /* MechanismAspects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106C51B2BF955005ED353 /* MechanismAspects.swift */; };
-		70E107071B2BF955005ED353 /* Medic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106C61B2BF955005ED353 /* Medic.swift */; };
-		70E107081B2BF955005ED353 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106C71B2BF955005ED353 /* MenuScene.sks */; };
-		70E107091B2BF955005ED353 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106C81B2BF955005ED353 /* MenuScene.swift */; };
-		70E1070A1B2BF955005ED353 /* Miner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106C91B2BF955005ED353 /* Miner.swift */; };
-		70E1070B1B2BF955005ED353 /* MoveToHQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106CA1B2BF955005ED353 /* MoveToHQ.swift */; };
-		70E1070C1B2BF955005ED353 /* MoveToKnownEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106CB1B2BF955005ED353 /* MoveToKnownEnemy.swift */; };
-		70E1070D1B2BF955005ED353 /* MoveToOreDeposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106CC1B2BF955005ED353 /* MoveToOreDeposit.swift */; };
-		70E1070E1B2BF955005ED353 /* MoveToWeakUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106CD1B2BF955005ED353 /* MoveToWeakUnit.swift */; };
-		70E1070F1B2BF955005ED353 /* NeedCharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106CE1B2BF955005ED353 /* NeedCharge.swift */; };
-		70E107101B2BF955005ED353 /* NeedRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106CF1B2BF955005ED353 /* NeedRepair.swift */; };
-		70E107111B2BF955005ED353 /* OreDeposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D01B2BF955005ED353 /* OreDeposit.swift */; };
-		70E107121B2BF955005ED353 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D11B2BF955005ED353 /* Projectile.swift */; };
-		70E107131B2BF955005ED353 /* Repairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D21B2BF955005ED353 /* Repairing.swift */; };
-		70E107141B2BF955005ED353 /* RepairStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D31B2BF955005ED353 /* RepairStation.swift */; };
-		70E107151B2BF955005ED353 /* RepairUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D41B2BF955005ED353 /* RepairUnit.swift */; };
-		70E107161B2BF955005ED353 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D51B2BF955005ED353 /* Rocket.swift */; };
-		70E107171B2BF955005ED353 /* RocketExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D61B2BF955005ED353 /* RocketExplosion.swift */; };
-		70E107181B2BF955005ED353 /* ScatterShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D71B2BF955005ED353 /* ScatterShot.swift */; };
-		70E107191B2BF955005ED353 /* SmallBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106D81B2BF955005ED353 /* SmallBullet.swift */; };
-		70E1071A1B2BF955005ED353 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E106D91B2BF955005ED353 /* spark.png */; };
-		70E1071B1B2BF955005ED353 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106DA1B2BF955005ED353 /* State.swift */; };
-		70E1071C1B2BF955005ED353 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106DB1B2BF955005ED353 /* Structure.swift */; };
-		70E1071D1B2BF955005ED353 /* StructureExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106DC1B2BF955005ED353 /* StructureExplosion.swift */; };
-		70E1071E1B2BF955005ED353 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106DD1B2BF955005ED353 /* Team.swift */; };
-		70E1071F1B2BF955005ED353 /* TestScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106DE1B2BF955005ED353 /* TestScene.sks */; };
-		70E107201B2BF955005ED353 /* TestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106DF1B2BF955005ED353 /* TestScene.swift */; };
-		70E107211B2BF955005ED353 /* Tutorial.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E106E01B2BF955005ED353 /* Tutorial.sks */; };
-		70E107221B2BF955005ED353 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106E11B2BF955005ED353 /* Tutorial.swift */; };
-		70E107231B2BF955005ED353 /* Wander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106E21B2BF955005ED353 /* Wander.swift */; };
-		70E107241B2BF955005ED353 /* WeaponizedAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106E31B2BF955005ED353 /* WeaponizedAuto.swift */; };
-		70E107251B2BF955005ED353 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E106E41B2BF955005ED353 /* World.swift */; };
-		70E107331B2BFB3A005ED353 /* explosionStructureFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E1072C1B2BFB3A005ED353 /* explosionStructureFire.sks */; };
-		70E107341B2BFB3A005ED353 /* explosionStructureSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E1072D1B2BFB3A005ED353 /* explosionStructureSmoke.sks */; };
-		70E107351B2BFB3A005ED353 /* Mechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1072E1B2BFB3A005ED353 /* Mechanism.swift */; };
-		70E107361B2BFB3A005ED353 /* MediumBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1072F1B2BFB3A005ED353 /* MediumBullet.swift */; };
-		70E107371B2BFB3A005ED353 /* Recharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107301B2BFB3A005ED353 /* Recharge.swift */; };
-		70E107381B2BFB3A005ED353 /* rocketTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107311B2BFB3A005ED353 /* rocketTrail.sks */; };
-		70E107391B2BFB3A005ED353 /* Scout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107321B2BFB3A005ED353 /* Scout.swift */; };
-		70E107871B2BFF1A005ED353 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E107851B2BFF1A005ED353 /* LaunchScreen.xib */; };
-		70E107881B2BFF1A005ED353 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E107861B2BFF1A005ED353 /* Main.storyboard */; };
+		70E107CF1B2C05C0005ED353 /* Artillery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1078F1B2C05C0005ED353 /* Artillery.swift */; };
+		70E107D01B2C05C0005ED353 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107901B2C05C0005ED353 /* Attack.swift */; };
+		70E107D11B2C05C0005ED353 /* Auto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107911B2C05C0005ED353 /* Auto.swift */; };
+		70E107D21B2C05C0005ED353 /* AutoExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107921B2C05C0005ED353 /* AutoExplosion.swift */; };
+		70E107D31B2C05C0005ED353 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 70E107931B2C05C0005ED353 /* Base.lproj */; };
+		70E107D41B2C05C0005ED353 /* Boundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107941B2C05C0005ED353 /* Boundary.swift */; };
+		70E107D51B2C05C0005ED353 /* BulletExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107951B2C05C0005ED353 /* BulletExplosion.swift */; };
+		70E107D61B2C05C0005ED353 /* BulletGuardTurret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107961B2C05C0005ED353 /* BulletGuardTurret.swift */; };
+		70E107D71B2C05C0005ED353 /* bulletTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107971B2C05C0005ED353 /* bulletTrail.sks */; };
+		70E107D81B2C05C0005ED353 /* bulletTrailSmall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107981B2C05C0005ED353 /* bulletTrailSmall.sks */; };
+		70E107D91B2C05C0005ED353 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107991B2C05C0005ED353 /* Button.swift */; };
+		70E107DA1B2C05C0005ED353 /* ChargingStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1079A1B2C05C0005ED353 /* ChargingStation.swift */; };
+		70E107DB1B2C05C0005ED353 /* DamageExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1079B1B2C05C0005ED353 /* DamageExplosion.swift */; };
+		70E107DC1B2C05C0005ED353 /* DoorTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1079C1B2C05C0005ED353 /* DoorTransition.swift */; };
+		70E107DD1B2C05C0005ED353 /* drillSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E1079D1B2C05C0005ED353 /* drillSparks.sks */; };
+		70E107DE1B2C05C0005ED353 /* Explosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1079E1B2C05C0005ED353 /* Explosion.swift */; };
+		70E107DF1B2C05C0005ED353 /* explosionAutoFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E1079F1B2C05C0005ED353 /* explosionAutoFire.sks */; };
+		70E107E01B2C05C0005ED353 /* explosionAutoSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107A01B2C05C0005ED353 /* explosionAutoSmoke.sks */; };
+		70E107E11B2C05C0005ED353 /* explosionBulletSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107A11B2C05C0005ED353 /* explosionBulletSmoke.sks */; };
+		70E107E21B2C05C0005ED353 /* FSM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A21B2C05C0005ED353 /* FSM.swift */; };
+		70E107E31B2C05C0005ED353 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A31B2C05C0005ED353 /* GameScene.swift */; };
+		70E107E41B2C05C0005ED353 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A41B2C05C0005ED353 /* GameViewController.swift */; };
+		70E107E51B2C05C0005ED353 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A51B2C05C0005ED353 /* General.swift */; };
+		70E107E61B2C05C0005ED353 /* Guard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A61B2C05C0005ED353 /* Guard.swift */; };
+		70E107E71B2C05C0005ED353 /* GuardTurret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A71B2C05C0005ED353 /* GuardTurret.swift */; };
+		70E107E81B2C05C0005ED353 /* Headquarters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A81B2C05C0005ED353 /* Headquarters.swift */; };
+		70E107E91B2C05C0005ED353 /* HealthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107A91B2C05C0005ED353 /* HealthBar.swift */; };
+		70E107EA1B2C05C0005ED353 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E107AA1B2C05C0005ED353 /* Images.xcassets */; };
+		70E107EB1B2C05C0005ED353 /* LevelSelectScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107AB1B2C05C0005ED353 /* LevelSelectScene.sks */; };
+		70E107EC1B2C05C0005ED353 /* LevelSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107AC1B2C05C0005ED353 /* LevelSelectScene.swift */; };
+		70E107ED1B2C05C0005ED353 /* LightArmor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107AD1B2C05C0005ED353 /* LightArmor.swift */; };
+		70E107EE1B2C05C0005ED353 /* MachineGunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107AE1B2C05C0005ED353 /* MachineGunner.swift */; };
+		70E107EF1B2C05C0005ED353 /* MechanismAspects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107AF1B2C05C0005ED353 /* MechanismAspects.swift */; };
+		70E107F01B2C05C0005ED353 /* Medic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B01B2C05C0005ED353 /* Medic.swift */; };
+		70E107F11B2C05C0005ED353 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107B11B2C05C0005ED353 /* MenuScene.sks */; };
+		70E107F21B2C05C0005ED353 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B21B2C05C0005ED353 /* MenuScene.swift */; };
+		70E107F31B2C05C0005ED353 /* Miner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B31B2C05C0005ED353 /* Miner.swift */; };
+		70E107F41B2C05C0005ED353 /* MoveToHQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B41B2C05C0005ED353 /* MoveToHQ.swift */; };
+		70E107F51B2C05C0005ED353 /* MoveToKnownEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B51B2C05C0005ED353 /* MoveToKnownEnemy.swift */; };
+		70E107F61B2C05C0005ED353 /* MoveToOreDeposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B61B2C05C0005ED353 /* MoveToOreDeposit.swift */; };
+		70E107F71B2C05C0005ED353 /* MoveToWeakUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B71B2C05C0005ED353 /* MoveToWeakUnit.swift */; };
+		70E107F81B2C05C0005ED353 /* NeedCharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B81B2C05C0005ED353 /* NeedCharge.swift */; };
+		70E107F91B2C05C0005ED353 /* NeedRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107B91B2C05C0005ED353 /* NeedRepair.swift */; };
+		70E107FA1B2C05C0005ED353 /* OreDeposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107BA1B2C05C0005ED353 /* OreDeposit.swift */; };
+		70E107FB1B2C05C0005ED353 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107BB1B2C05C0005ED353 /* Projectile.swift */; };
+		70E107FC1B2C05C0005ED353 /* Repairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107BC1B2C05C0005ED353 /* Repairing.swift */; };
+		70E107FD1B2C05C0005ED353 /* RepairStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107BD1B2C05C0005ED353 /* RepairStation.swift */; };
+		70E107FE1B2C05C0005ED353 /* RepairUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107BE1B2C05C0005ED353 /* RepairUnit.swift */; };
+		70E107FF1B2C05C0005ED353 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107BF1B2C05C0005ED353 /* Rocket.swift */; };
+		70E108001B2C05C0005ED353 /* RocketExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C01B2C05C0005ED353 /* RocketExplosion.swift */; };
+		70E108011B2C05C0005ED353 /* ScatterShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C11B2C05C0005ED353 /* ScatterShot.swift */; };
+		70E108021B2C05C0005ED353 /* SmallBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C21B2C05C0005ED353 /* SmallBullet.swift */; };
+		70E108031B2C05C0005ED353 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E107C31B2C05C0005ED353 /* spark.png */; };
+		70E108041B2C05C0005ED353 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C41B2C05C0005ED353 /* State.swift */; };
+		70E108051B2C05C0005ED353 /* Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C51B2C05C0005ED353 /* Structure.swift */; };
+		70E108061B2C05C0005ED353 /* StructureExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C61B2C05C0005ED353 /* StructureExplosion.swift */; };
+		70E108071B2C05C0005ED353 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C71B2C05C0005ED353 /* Team.swift */; };
+		70E108081B2C05C0005ED353 /* TestScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107C81B2C05C0005ED353 /* TestScene.sks */; };
+		70E108091B2C05C0005ED353 /* TestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107C91B2C05C0005ED353 /* TestScene.swift */; };
+		70E1080A1B2C05C0005ED353 /* Tutorial.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E107CA1B2C05C0005ED353 /* Tutorial.sks */; };
+		70E1080B1B2C05C0005ED353 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107CB1B2C05C0005ED353 /* Tutorial.swift */; };
+		70E1080C1B2C05C0005ED353 /* Wander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107CC1B2C05C0005ED353 /* Wander.swift */; };
+		70E1080D1B2C05C0005ED353 /* WeaponizedAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107CD1B2C05C0005ED353 /* WeaponizedAuto.swift */; };
+		70E1080E1B2C05C0005ED353 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E107CE1B2C05C0005ED353 /* World.swift */; };
+		70E108161B2C05CE005ED353 /* explosionStructureFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E1080F1B2C05CE005ED353 /* explosionStructureFire.sks */; };
+		70E108171B2C05CE005ED353 /* explosionStructureSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E108101B2C05CE005ED353 /* explosionStructureSmoke.sks */; };
+		70E108181B2C05CE005ED353 /* Mechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E108111B2C05CE005ED353 /* Mechanism.swift */; };
+		70E108191B2C05CE005ED353 /* MediumBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E108121B2C05CE005ED353 /* MediumBullet.swift */; };
+		70E1081A1B2C05CE005ED353 /* Recharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E108131B2C05CE005ED353 /* Recharge.swift */; };
+		70E1081B1B2C05CE005ED353 /* rocketTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E108141B2C05CE005ED353 /* rocketTrail.sks */; };
+		70E1081C1B2C05CE005ED353 /* Scout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E108151B2C05CE005ED353 /* Scout.swift */; };
+		70E108621B2C08D8005ED353 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E108601B2C08D8005ED353 /* Main.storyboard */; };
+		70E108631B2C08D8005ED353 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E108611B2C08D8005ED353 /* LaunchScreen.xib */; };
+		70E108651B2C0906005ED353 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E108641B2C0906005ED353 /* Default-568h@2x.png */; };
+		70E108671B2C0A27005ED353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E108661B2C0A27005ED353 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,84 +97,84 @@
 
 /* Begin PBXFileReference section */
 		70E106781B2BF8D1005ED353 /* Battle Bots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battle Bots.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70E1067C1B2BF8D1005ED353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70E1067D1B2BF8D1005ED353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70E106911B2BF8D1005ED353 /* Battle BotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Battle BotsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E106961B2BF8D1005ED353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E106971B2BF8D1005ED353 /* Battle_BotsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle_BotsTests.swift; sourceTree = "<group>"; };
-		70E106A11B2BF923005ED353 /* Artillery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artillery.swift; path = "../../Bot Warefare/Bot Warefare/Artillery.swift"; sourceTree = "<group>"; };
-		70E106A41B2BF954005ED353 /* Attack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attack.swift; path = "../../Bot Warefare/Bot Warefare/Attack.swift"; sourceTree = "<group>"; };
-		70E106A51B2BF954005ED353 /* Auto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Auto.swift; path = "../../Bot Warefare/Bot Warefare/Auto.swift"; sourceTree = "<group>"; };
-		70E106A61B2BF954005ED353 /* AutoExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoExplosion.swift; path = "../../Bot Warefare/Bot Warefare/AutoExplosion.swift"; sourceTree = "<group>"; };
-		70E106A71B2BF954005ED353 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = "../Bot Warefare/Bot Warefare/Base.lproj"; sourceTree = "<group>"; };
-		70E106A81B2BF954005ED353 /* Boundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Boundary.swift; path = "../../Bot Warefare/Bot Warefare/Boundary.swift"; sourceTree = "<group>"; };
-		70E106A91B2BF954005ED353 /* BulletExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BulletExplosion.swift; path = "../../Bot Warefare/Bot Warefare/BulletExplosion.swift"; sourceTree = "<group>"; };
-		70E106AA1B2BF954005ED353 /* BulletGuardTurret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BulletGuardTurret.swift; path = "../../Bot Warefare/Bot Warefare/BulletGuardTurret.swift"; sourceTree = "<group>"; };
-		70E106AB1B2BF954005ED353 /* bulletTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = bulletTrail.sks; path = "../../Bot Warefare/Bot Warefare/bulletTrail.sks"; sourceTree = "<group>"; };
-		70E106AC1B2BF954005ED353 /* bulletTrailSmall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = bulletTrailSmall.sks; path = "../../Bot Warefare/Bot Warefare/bulletTrailSmall.sks"; sourceTree = "<group>"; };
-		70E106AD1B2BF954005ED353 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Button.swift; path = "../../Bot Warefare/Bot Warefare/Button.swift"; sourceTree = "<group>"; };
-		70E106AE1B2BF954005ED353 /* ChargingStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargingStation.swift; path = "../../Bot Warefare/Bot Warefare/ChargingStation.swift"; sourceTree = "<group>"; };
-		70E106B01B2BF954005ED353 /* DamageExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DamageExplosion.swift; path = "../../Bot Warefare/Bot Warefare/DamageExplosion.swift"; sourceTree = "<group>"; };
-		70E106B11B2BF954005ED353 /* DoorTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoorTransition.swift; path = "../../Bot Warefare/Bot Warefare/DoorTransition.swift"; sourceTree = "<group>"; };
-		70E106B21B2BF954005ED353 /* drillSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = drillSparks.sks; path = "../../Bot Warefare/Bot Warefare/drillSparks.sks"; sourceTree = "<group>"; };
-		70E106B31B2BF954005ED353 /* Explosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Explosion.swift; path = "../../Bot Warefare/Bot Warefare/Explosion.swift"; sourceTree = "<group>"; };
-		70E106B41B2BF954005ED353 /* explosionAutoFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = explosionAutoFire.sks; path = "../../Bot Warefare/Bot Warefare/explosionAutoFire.sks"; sourceTree = "<group>"; };
-		70E106B51B2BF954005ED353 /* explosionAutoSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = explosionAutoSmoke.sks; path = "../../Bot Warefare/Bot Warefare/explosionAutoSmoke.sks"; sourceTree = "<group>"; };
-		70E106B61B2BF954005ED353 /* explosionBulletSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = explosionBulletSmoke.sks; path = "../../Bot Warefare/Bot Warefare/explosionBulletSmoke.sks"; sourceTree = "<group>"; };
-		70E106B71B2BF954005ED353 /* FSM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FSM.swift; path = "../../Bot Warefare/Bot Warefare/FSM.swift"; sourceTree = "<group>"; };
-		70E106B81B2BF954005ED353 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = "../../Bot Warefare/Bot Warefare/GameScene.swift"; sourceTree = "<group>"; };
-		70E106B91B2BF954005ED353 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = "../../Bot Warefare/Bot Warefare/GameViewController.swift"; sourceTree = "<group>"; };
-		70E106BA1B2BF954005ED353 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = General.swift; path = "../../Bot Warefare/Bot Warefare/General.swift"; sourceTree = "<group>"; };
-		70E106BB1B2BF954005ED353 /* Guard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Guard.swift; path = "../../Bot Warefare/Bot Warefare/Guard.swift"; sourceTree = "<group>"; };
-		70E106BC1B2BF954005ED353 /* GuardTurret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuardTurret.swift; path = "../../Bot Warefare/Bot Warefare/GuardTurret.swift"; sourceTree = "<group>"; };
-		70E106BD1B2BF954005ED353 /* Headquarters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Headquarters.swift; path = "../../Bot Warefare/Bot Warefare/Headquarters.swift"; sourceTree = "<group>"; };
-		70E106BE1B2BF954005ED353 /* HealthBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthBar.swift; path = "../../Bot Warefare/Bot Warefare/HealthBar.swift"; sourceTree = "<group>"; };
-		70E106BF1B2BF954005ED353 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../Bot Warefare/Bot Warefare/Images.xcassets"; sourceTree = "<group>"; };
-		70E106C11B2BF954005ED353 /* LevelSelectScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = LevelSelectScene.sks; path = "../../Bot Warefare/Bot Warefare/LevelSelectScene.sks"; sourceTree = "<group>"; };
-		70E106C21B2BF955005ED353 /* LevelSelectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelSelectScene.swift; path = "../../Bot Warefare/Bot Warefare/LevelSelectScene.swift"; sourceTree = "<group>"; };
-		70E106C31B2BF955005ED353 /* LightArmor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LightArmor.swift; path = "../../Bot Warefare/Bot Warefare/LightArmor.swift"; sourceTree = "<group>"; };
-		70E106C41B2BF955005ED353 /* MachineGunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MachineGunner.swift; path = "../../Bot Warefare/Bot Warefare/MachineGunner.swift"; sourceTree = "<group>"; };
-		70E106C51B2BF955005ED353 /* MechanismAspects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MechanismAspects.swift; path = "../../Bot Warefare/Bot Warefare/MechanismAspects.swift"; sourceTree = "<group>"; };
-		70E106C61B2BF955005ED353 /* Medic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Medic.swift; path = "../../Bot Warefare/Bot Warefare/Medic.swift"; sourceTree = "<group>"; };
-		70E106C71B2BF955005ED353 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MenuScene.sks; path = "../../Bot Warefare/Bot Warefare/MenuScene.sks"; sourceTree = "<group>"; };
-		70E106C81B2BF955005ED353 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = "../../Bot Warefare/Bot Warefare/MenuScene.swift"; sourceTree = "<group>"; };
-		70E106C91B2BF955005ED353 /* Miner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Miner.swift; path = "../../Bot Warefare/Bot Warefare/Miner.swift"; sourceTree = "<group>"; };
-		70E106CA1B2BF955005ED353 /* MoveToHQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveToHQ.swift; path = "../../Bot Warefare/Bot Warefare/MoveToHQ.swift"; sourceTree = "<group>"; };
-		70E106CB1B2BF955005ED353 /* MoveToKnownEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveToKnownEnemy.swift; path = "../../Bot Warefare/Bot Warefare/MoveToKnownEnemy.swift"; sourceTree = "<group>"; };
-		70E106CC1B2BF955005ED353 /* MoveToOreDeposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveToOreDeposit.swift; path = "../../Bot Warefare/Bot Warefare/MoveToOreDeposit.swift"; sourceTree = "<group>"; };
-		70E106CD1B2BF955005ED353 /* MoveToWeakUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveToWeakUnit.swift; path = "../../Bot Warefare/Bot Warefare/MoveToWeakUnit.swift"; sourceTree = "<group>"; };
-		70E106CE1B2BF955005ED353 /* NeedCharge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedCharge.swift; path = "../../Bot Warefare/Bot Warefare/NeedCharge.swift"; sourceTree = "<group>"; };
-		70E106CF1B2BF955005ED353 /* NeedRepair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedRepair.swift; path = "../../Bot Warefare/Bot Warefare/NeedRepair.swift"; sourceTree = "<group>"; };
-		70E106D01B2BF955005ED353 /* OreDeposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OreDeposit.swift; path = "../../Bot Warefare/Bot Warefare/OreDeposit.swift"; sourceTree = "<group>"; };
-		70E106D11B2BF955005ED353 /* Projectile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Projectile.swift; path = "../../Bot Warefare/Bot Warefare/Projectile.swift"; sourceTree = "<group>"; };
-		70E106D21B2BF955005ED353 /* Repairing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repairing.swift; path = "../../Bot Warefare/Bot Warefare/Repairing.swift"; sourceTree = "<group>"; };
-		70E106D31B2BF955005ED353 /* RepairStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepairStation.swift; path = "../../Bot Warefare/Bot Warefare/RepairStation.swift"; sourceTree = "<group>"; };
-		70E106D41B2BF955005ED353 /* RepairUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepairUnit.swift; path = "../../Bot Warefare/Bot Warefare/RepairUnit.swift"; sourceTree = "<group>"; };
-		70E106D51B2BF955005ED353 /* Rocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rocket.swift; path = "../../Bot Warefare/Bot Warefare/Rocket.swift"; sourceTree = "<group>"; };
-		70E106D61B2BF955005ED353 /* RocketExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RocketExplosion.swift; path = "../../Bot Warefare/Bot Warefare/RocketExplosion.swift"; sourceTree = "<group>"; };
-		70E106D71B2BF955005ED353 /* ScatterShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScatterShot.swift; path = "../../Bot Warefare/Bot Warefare/ScatterShot.swift"; sourceTree = "<group>"; };
-		70E106D81B2BF955005ED353 /* SmallBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmallBullet.swift; path = "../../Bot Warefare/Bot Warefare/SmallBullet.swift"; sourceTree = "<group>"; };
-		70E106D91B2BF955005ED353 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = "../../Bot Warefare/Bot Warefare/spark.png"; sourceTree = "<group>"; };
-		70E106DA1B2BF955005ED353 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = "../../Bot Warefare/Bot Warefare/State.swift"; sourceTree = "<group>"; };
-		70E106DB1B2BF955005ED353 /* Structure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Structure.swift; path = "../../Bot Warefare/Bot Warefare/Structure.swift"; sourceTree = "<group>"; };
-		70E106DC1B2BF955005ED353 /* StructureExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StructureExplosion.swift; path = "../../Bot Warefare/Bot Warefare/StructureExplosion.swift"; sourceTree = "<group>"; };
-		70E106DD1B2BF955005ED353 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Team.swift; path = "../../Bot Warefare/Bot Warefare/Team.swift"; sourceTree = "<group>"; };
-		70E106DE1B2BF955005ED353 /* TestScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TestScene.sks; path = "../../Bot Warefare/Bot Warefare/TestScene.sks"; sourceTree = "<group>"; };
-		70E106DF1B2BF955005ED353 /* TestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestScene.swift; path = "../../Bot Warefare/Bot Warefare/TestScene.swift"; sourceTree = "<group>"; };
-		70E106E01B2BF955005ED353 /* Tutorial.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Tutorial.sks; path = "../../Bot Warefare/Bot Warefare/Tutorial.sks"; sourceTree = "<group>"; };
-		70E106E11B2BF955005ED353 /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial.swift; path = "../../Bot Warefare/Bot Warefare/Tutorial.swift"; sourceTree = "<group>"; };
-		70E106E21B2BF955005ED353 /* Wander.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wander.swift; path = "../../Bot Warefare/Bot Warefare/Wander.swift"; sourceTree = "<group>"; };
-		70E106E31B2BF955005ED353 /* WeaponizedAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeaponizedAuto.swift; path = "../../Bot Warefare/Bot Warefare/WeaponizedAuto.swift"; sourceTree = "<group>"; };
-		70E106E41B2BF955005ED353 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = World.swift; path = "../../Bot Warefare/Bot Warefare/World.swift"; sourceTree = "<group>"; };
-		70E1072C1B2BFB3A005ED353 /* explosionStructureFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = explosionStructureFire.sks; path = "../../Bot Warefare/explosionStructureFire.sks"; sourceTree = "<group>"; };
-		70E1072D1B2BFB3A005ED353 /* explosionStructureSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = explosionStructureSmoke.sks; path = "../../Bot Warefare/explosionStructureSmoke.sks"; sourceTree = "<group>"; };
-		70E1072E1B2BFB3A005ED353 /* Mechanism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mechanism.swift; path = "../../Bot Warefare/Mechanism.swift"; sourceTree = "<group>"; };
-		70E1072F1B2BFB3A005ED353 /* MediumBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediumBullet.swift; path = "../../Bot Warefare/MediumBullet.swift"; sourceTree = "<group>"; };
-		70E107301B2BFB3A005ED353 /* Recharge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recharge.swift; path = "../../Bot Warefare/Recharge.swift"; sourceTree = "<group>"; };
-		70E107311B2BFB3A005ED353 /* rocketTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = rocketTrail.sks; path = "../../Bot Warefare/rocketTrail.sks"; sourceTree = "<group>"; };
-		70E107321B2BFB3A005ED353 /* Scout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scout.swift; path = "../../Bot Warefare/Scout.swift"; sourceTree = "<group>"; };
-		70E107851B2BFF1A005ED353 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = "../../Bot Warefare/Bot Warefare/Base.lproj/Battle Bots/LaunchScreen.xib"; sourceTree = "<group>"; };
-		70E107861B2BFF1A005ED353 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../../Bot Warefare/Bot Warefare/Base.lproj/Battle Bots/Main.storyboard"; sourceTree = "<group>"; };
+		70E1078F1B2C05C0005ED353 /* Artillery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artillery.swift; sourceTree = "<group>"; };
+		70E107901B2C05C0005ED353 /* Attack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attack.swift; sourceTree = "<group>"; };
+		70E107911B2C05C0005ED353 /* Auto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auto.swift; sourceTree = "<group>"; };
+		70E107921B2C05C0005ED353 /* AutoExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoExplosion.swift; sourceTree = "<group>"; };
+		70E107931B2C05C0005ED353 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		70E107941B2C05C0005ED353 /* Boundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundary.swift; sourceTree = "<group>"; };
+		70E107951B2C05C0005ED353 /* BulletExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletExplosion.swift; sourceTree = "<group>"; };
+		70E107961B2C05C0005ED353 /* BulletGuardTurret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletGuardTurret.swift; sourceTree = "<group>"; };
+		70E107971B2C05C0005ED353 /* bulletTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bulletTrail.sks; sourceTree = "<group>"; };
+		70E107981B2C05C0005ED353 /* bulletTrailSmall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bulletTrailSmall.sks; sourceTree = "<group>"; };
+		70E107991B2C05C0005ED353 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		70E1079A1B2C05C0005ED353 /* ChargingStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargingStation.swift; sourceTree = "<group>"; };
+		70E1079B1B2C05C0005ED353 /* DamageExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageExplosion.swift; sourceTree = "<group>"; };
+		70E1079C1B2C05C0005ED353 /* DoorTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorTransition.swift; sourceTree = "<group>"; };
+		70E1079D1B2C05C0005ED353 /* drillSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = drillSparks.sks; sourceTree = "<group>"; };
+		70E1079E1B2C05C0005ED353 /* Explosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Explosion.swift; sourceTree = "<group>"; };
+		70E1079F1B2C05C0005ED353 /* explosionAutoFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosionAutoFire.sks; sourceTree = "<group>"; };
+		70E107A01B2C05C0005ED353 /* explosionAutoSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosionAutoSmoke.sks; sourceTree = "<group>"; };
+		70E107A11B2C05C0005ED353 /* explosionBulletSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosionBulletSmoke.sks; sourceTree = "<group>"; };
+		70E107A21B2C05C0005ED353 /* FSM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSM.swift; sourceTree = "<group>"; };
+		70E107A31B2C05C0005ED353 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		70E107A41B2C05C0005ED353 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		70E107A51B2C05C0005ED353 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		70E107A61B2C05C0005ED353 /* Guard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guard.swift; sourceTree = "<group>"; };
+		70E107A71B2C05C0005ED353 /* GuardTurret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardTurret.swift; sourceTree = "<group>"; };
+		70E107A81B2C05C0005ED353 /* Headquarters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headquarters.swift; sourceTree = "<group>"; };
+		70E107A91B2C05C0005ED353 /* HealthBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthBar.swift; sourceTree = "<group>"; };
+		70E107AA1B2C05C0005ED353 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		70E107AB1B2C05C0005ED353 /* LevelSelectScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelSelectScene.sks; sourceTree = "<group>"; };
+		70E107AC1B2C05C0005ED353 /* LevelSelectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelectScene.swift; sourceTree = "<group>"; };
+		70E107AD1B2C05C0005ED353 /* LightArmor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightArmor.swift; sourceTree = "<group>"; };
+		70E107AE1B2C05C0005ED353 /* MachineGunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineGunner.swift; sourceTree = "<group>"; };
+		70E107AF1B2C05C0005ED353 /* MechanismAspects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MechanismAspects.swift; sourceTree = "<group>"; };
+		70E107B01B2C05C0005ED353 /* Medic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medic.swift; sourceTree = "<group>"; };
+		70E107B11B2C05C0005ED353 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		70E107B21B2C05C0005ED353 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		70E107B31B2C05C0005ED353 /* Miner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Miner.swift; sourceTree = "<group>"; };
+		70E107B41B2C05C0005ED353 /* MoveToHQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToHQ.swift; sourceTree = "<group>"; };
+		70E107B51B2C05C0005ED353 /* MoveToKnownEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToKnownEnemy.swift; sourceTree = "<group>"; };
+		70E107B61B2C05C0005ED353 /* MoveToOreDeposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToOreDeposit.swift; sourceTree = "<group>"; };
+		70E107B71B2C05C0005ED353 /* MoveToWeakUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToWeakUnit.swift; sourceTree = "<group>"; };
+		70E107B81B2C05C0005ED353 /* NeedCharge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedCharge.swift; sourceTree = "<group>"; };
+		70E107B91B2C05C0005ED353 /* NeedRepair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedRepair.swift; sourceTree = "<group>"; };
+		70E107BA1B2C05C0005ED353 /* OreDeposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OreDeposit.swift; sourceTree = "<group>"; };
+		70E107BB1B2C05C0005ED353 /* Projectile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
+		70E107BC1B2C05C0005ED353 /* Repairing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repairing.swift; sourceTree = "<group>"; };
+		70E107BD1B2C05C0005ED353 /* RepairStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairStation.swift; sourceTree = "<group>"; };
+		70E107BE1B2C05C0005ED353 /* RepairUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepairUnit.swift; sourceTree = "<group>"; };
+		70E107BF1B2C05C0005ED353 /* Rocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		70E107C01B2C05C0005ED353 /* RocketExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketExplosion.swift; sourceTree = "<group>"; };
+		70E107C11B2C05C0005ED353 /* ScatterShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterShot.swift; sourceTree = "<group>"; };
+		70E107C21B2C05C0005ED353 /* SmallBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallBullet.swift; sourceTree = "<group>"; };
+		70E107C31B2C05C0005ED353 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		70E107C41B2C05C0005ED353 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		70E107C51B2C05C0005ED353 /* Structure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structure.swift; sourceTree = "<group>"; };
+		70E107C61B2C05C0005ED353 /* StructureExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructureExplosion.swift; sourceTree = "<group>"; };
+		70E107C71B2C05C0005ED353 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		70E107C81B2C05C0005ED353 /* TestScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TestScene.sks; sourceTree = "<group>"; };
+		70E107C91B2C05C0005ED353 /* TestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScene.swift; sourceTree = "<group>"; };
+		70E107CA1B2C05C0005ED353 /* Tutorial.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Tutorial.sks; sourceTree = "<group>"; };
+		70E107CB1B2C05C0005ED353 /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		70E107CC1B2C05C0005ED353 /* Wander.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wander.swift; sourceTree = "<group>"; };
+		70E107CD1B2C05C0005ED353 /* WeaponizedAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponizedAuto.swift; sourceTree = "<group>"; };
+		70E107CE1B2C05C0005ED353 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		70E1080F1B2C05CE005ED353 /* explosionStructureFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosionStructureFire.sks; sourceTree = "<group>"; };
+		70E108101B2C05CE005ED353 /* explosionStructureSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosionStructureSmoke.sks; sourceTree = "<group>"; };
+		70E108111B2C05CE005ED353 /* Mechanism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mechanism.swift; sourceTree = "<group>"; };
+		70E108121B2C05CE005ED353 /* MediumBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumBullet.swift; sourceTree = "<group>"; };
+		70E108131B2C05CE005ED353 /* Recharge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recharge.swift; sourceTree = "<group>"; };
+		70E108141B2C05CE005ED353 /* rocketTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rocketTrail.sks; sourceTree = "<group>"; };
+		70E108151B2C05CE005ED353 /* Scout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scout.swift; sourceTree = "<group>"; };
+		70E108601B2C08D8005ED353 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		70E108611B2C08D8005ED353 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		70E108641B2C0906005ED353 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		70E108661B2C0A27005ED353 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,11 +198,10 @@
 		70E1066F1B2BF8D0005ED353 = {
 			isa = PBXGroup;
 			children = (
+				70E108641B2C0906005ED353 /* Default-568h@2x.png */,
 				70E1067A1B2BF8D1005ED353 /* Battle Bots */,
-				70E106BF1B2BF954005ED353 /* Images.xcassets */,
 				70E106941B2BF8D1005ED353 /* Battle BotsTests */,
 				70E106791B2BF8D1005ED353 /* Products */,
-				70E106A71B2BF954005ED353 /* Base.lproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,34 +217,27 @@
 		70E1067A1B2BF8D1005ED353 /* Battle Bots */ = {
 			isa = PBXGroup;
 			children = (
-				70E1067D1B2BF8D1005ED353 /* AppDelegate.swift */,
-				70E106B91B2BF954005ED353 /* GameViewController.swift */,
-				70E106E41B2BF955005ED353 /* World.swift */,
-				70E106D01B2BF955005ED353 /* OreDeposit.swift */,
-				70E106DD1B2BF955005ED353 /* Team.swift */,
-				70E106A81B2BF954005ED353 /* Boundary.swift */,
-				70E106BA1B2BF954005ED353 /* General.swift */,
-				70E106BE1B2BF954005ED353 /* HealthBar.swift */,
-				70E107421B2BFC8D005ED353 /* UI */,
-				70E107281B2BFA46005ED353 /* Mechanisms */,
-				70E107271B2BFA27005ED353 /* AI */,
-				70E1073A1B2BFB8A005ED353 /* Projectiles */,
-				70E1072A1B2BFA78005ED353 /* Explosions */,
-				70E1072B1B2BFA8D005ED353 /* ParticleFiles */,
-				70E1073C1B2BFBED005ED353 /* Scenes */,
-				70E107851B2BFF1A005ED353 /* LaunchScreen.xib */,
-				70E107861B2BFF1A005ED353 /* Main.storyboard */,
-				70E1067B1B2BF8D1005ED353 /* Supporting Files */,
+				70E108661B2C0A27005ED353 /* AppDelegate.swift */,
+				70E107A41B2C05C0005ED353 /* GameViewController.swift */,
+				70E107941B2C05C0005ED353 /* Boundary.swift */,
+				70E107A51B2C05C0005ED353 /* General.swift */,
+				70E107A91B2C05C0005ED353 /* HealthBar.swift */,
+				70E107BA1B2C05C0005ED353 /* OreDeposit.swift */,
+				70E107C71B2C05C0005ED353 /* Team.swift */,
+				70E107CE1B2C05C0005ED353 /* World.swift */,
+				70E1081E1B2C0606005ED353 /* AI */,
+				70E1081D1B2C05FF005ED353 /* UI */,
+				70E1081F1B2C0617005ED353 /* Particle Files */,
+				70E108241B2C067E005ED353 /* Projectiles */,
+				70E108231B2C066C005ED353 /* Explosions */,
+				70E108201B2C0646005ED353 /* Mechanisms */,
+				70E108261B2C072F005ED353 /* Scenes */,
+				70E107AA1B2C05C0005ED353 /* Images.xcassets */,
+				70E108601B2C08D8005ED353 /* Main.storyboard */,
+				70E108611B2C08D8005ED353 /* LaunchScreen.xib */,
+				70E107931B2C05C0005ED353 /* Base.lproj */,
 			);
 			path = "Battle Bots";
-			sourceTree = "<group>";
-		};
-		70E1067B1B2BF8D1005ED353 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				70E1067C1B2BF8D1005ED353 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		70E106941B2BF8D1005ED353 /* Battle BotsTests */ = {
@@ -264,150 +257,147 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		70E107261B2BF9C6005ED353 /* States */ = {
+		70E1081D1B2C05FF005ED353 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				70E107301B2BFB3A005ED353 /* Recharge.swift */,
-				70E106DA1B2BF955005ED353 /* State.swift */,
-				70E106A41B2BF954005ED353 /* Attack.swift */,
-				70E106BB1B2BF954005ED353 /* Guard.swift */,
-				70E106CA1B2BF955005ED353 /* MoveToHQ.swift */,
-				70E106CB1B2BF955005ED353 /* MoveToKnownEnemy.swift */,
-				70E106CC1B2BF955005ED353 /* MoveToOreDeposit.swift */,
-				70E106CD1B2BF955005ED353 /* MoveToWeakUnit.swift */,
-				70E106CE1B2BF955005ED353 /* NeedCharge.swift */,
-				70E106CF1B2BF955005ED353 /* NeedRepair.swift */,
-				70E106D21B2BF955005ED353 /* Repairing.swift */,
-				70E106D41B2BF955005ED353 /* RepairUnit.swift */,
-				70E106E21B2BF955005ED353 /* Wander.swift */,
+				70E107991B2C05C0005ED353 /* Button.swift */,
+				70E1079C1B2C05C0005ED353 /* DoorTransition.swift */,
 			);
-			name = States;
-			path = "../Battle Bots";
+			name = UI;
 			sourceTree = "<group>";
 		};
-		70E107271B2BFA27005ED353 /* AI */ = {
+		70E1081E1B2C0606005ED353 /* AI */ = {
 			isa = PBXGroup;
 			children = (
-				70E106B71B2BF954005ED353 /* FSM.swift */,
-				70E107261B2BF9C6005ED353 /* States */,
+				70E107A21B2C05C0005ED353 /* FSM.swift */,
+				70E108251B2C069A005ED353 /* States */,
 			);
 			name = AI;
-			path = "Battle Bots.xcodeproj";
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		70E107281B2BFA46005ED353 /* Mechanisms */ = {
+		70E1081F1B2C0617005ED353 /* Particle Files */ = {
 			isa = PBXGroup;
 			children = (
-				70E1072E1B2BFB3A005ED353 /* Mechanism.swift */,
-				70E106C51B2BF955005ED353 /* MechanismAspects.swift */,
-				70E1073B1B2BFBCD005ED353 /* Structures */,
-				70E107291B2BFA65005ED353 /* Autos */,
+				70E108141B2C05CE005ED353 /* rocketTrail.sks */,
+				70E1080F1B2C05CE005ED353 /* explosionStructureFire.sks */,
+				70E108101B2C05CE005ED353 /* explosionStructureSmoke.sks */,
+				70E107971B2C05C0005ED353 /* bulletTrail.sks */,
+				70E107981B2C05C0005ED353 /* bulletTrailSmall.sks */,
+				70E1079D1B2C05C0005ED353 /* drillSparks.sks */,
+				70E1079F1B2C05C0005ED353 /* explosionAutoFire.sks */,
+				70E107A01B2C05C0005ED353 /* explosionAutoSmoke.sks */,
+				70E107A11B2C05C0005ED353 /* explosionBulletSmoke.sks */,
+				70E107C31B2C05C0005ED353 /* spark.png */,
+			);
+			name = "Particle Files";
+			sourceTree = "<group>";
+		};
+		70E108201B2C0646005ED353 /* Mechanisms */ = {
+			isa = PBXGroup;
+			children = (
+				70E108111B2C05CE005ED353 /* Mechanism.swift */,
+				70E107AF1B2C05C0005ED353 /* MechanismAspects.swift */,
+				70E108221B2C0662005ED353 /* Structure */,
+				70E108211B2C0652005ED353 /* Autos */,
 			);
 			name = Mechanisms;
-			path = "Battle Bots.xcodeproj";
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		70E107291B2BFA65005ED353 /* Autos */ = {
+		70E108211B2C0652005ED353 /* Autos */ = {
 			isa = PBXGroup;
 			children = (
-				70E106E31B2BF955005ED353 /* WeaponizedAuto.swift */,
-				70E106A51B2BF954005ED353 /* Auto.swift */,
-				70E107321B2BFB3A005ED353 /* Scout.swift */,
-				70E106A11B2BF923005ED353 /* Artillery.swift */,
-				70E106C31B2BF955005ED353 /* LightArmor.swift */,
-				70E106C41B2BF955005ED353 /* MachineGunner.swift */,
-				70E106C61B2BF955005ED353 /* Medic.swift */,
-				70E106C91B2BF955005ED353 /* Miner.swift */,
-				70E106D71B2BF955005ED353 /* ScatterShot.swift */,
+				70E107C11B2C05C0005ED353 /* ScatterShot.swift */,
+				70E107AE1B2C05C0005ED353 /* MachineGunner.swift */,
+				70E108151B2C05CE005ED353 /* Scout.swift */,
+				70E1078F1B2C05C0005ED353 /* Artillery.swift */,
+				70E107911B2C05C0005ED353 /* Auto.swift */,
+				70E107AD1B2C05C0005ED353 /* LightArmor.swift */,
+				70E107B01B2C05C0005ED353 /* Medic.swift */,
+				70E107CD1B2C05C0005ED353 /* WeaponizedAuto.swift */,
+				70E107B31B2C05C0005ED353 /* Miner.swift */,
 			);
 			name = Autos;
 			sourceTree = "<group>";
 		};
-		70E1072A1B2BFA78005ED353 /* Explosions */ = {
+		70E108221B2C0662005ED353 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
-				70E106B01B2BF954005ED353 /* DamageExplosion.swift */,
-				70E106A91B2BF954005ED353 /* BulletExplosion.swift */,
-				70E106B31B2BF954005ED353 /* Explosion.swift */,
-				70E106A61B2BF954005ED353 /* AutoExplosion.swift */,
-				70E106D61B2BF955005ED353 /* RocketExplosion.swift */,
-				70E106DC1B2BF955005ED353 /* StructureExplosion.swift */,
+				70E107C51B2C05C0005ED353 /* Structure.swift */,
+				70E107961B2C05C0005ED353 /* BulletGuardTurret.swift */,
+				70E107A71B2C05C0005ED353 /* GuardTurret.swift */,
+				70E107A81B2C05C0005ED353 /* Headquarters.swift */,
+				70E1079A1B2C05C0005ED353 /* ChargingStation.swift */,
+				70E107BD1B2C05C0005ED353 /* RepairStation.swift */,
+			);
+			name = Structure;
+			sourceTree = "<group>";
+		};
+		70E108231B2C066C005ED353 /* Explosions */ = {
+			isa = PBXGroup;
+			children = (
+				70E107C61B2C05C0005ED353 /* StructureExplosion.swift */,
+				70E107C01B2C05C0005ED353 /* RocketExplosion.swift */,
+				70E1079E1B2C05C0005ED353 /* Explosion.swift */,
+				70E107921B2C05C0005ED353 /* AutoExplosion.swift */,
+				70E107951B2C05C0005ED353 /* BulletExplosion.swift */,
+				70E1079B1B2C05C0005ED353 /* DamageExplosion.swift */,
 			);
 			name = Explosions;
 			sourceTree = "<group>";
 		};
-		70E1072B1B2BFA8D005ED353 /* ParticleFiles */ = {
+		70E108241B2C067E005ED353 /* Projectiles */ = {
 			isa = PBXGroup;
 			children = (
-				70E107311B2BFB3A005ED353 /* rocketTrail.sks */,
-				70E1072C1B2BFB3A005ED353 /* explosionStructureFire.sks */,
-				70E1072D1B2BFB3A005ED353 /* explosionStructureSmoke.sks */,
-				70E106AB1B2BF954005ED353 /* bulletTrail.sks */,
-				70E106AC1B2BF954005ED353 /* bulletTrailSmall.sks */,
-				70E106B21B2BF954005ED353 /* drillSparks.sks */,
-				70E106B41B2BF954005ED353 /* explosionAutoFire.sks */,
-				70E106B51B2BF954005ED353 /* explosionAutoSmoke.sks */,
-				70E106B61B2BF954005ED353 /* explosionBulletSmoke.sks */,
-				70E106D91B2BF955005ED353 /* spark.png */,
-			);
-			name = ParticleFiles;
-			sourceTree = "<group>";
-		};
-		70E1073A1B2BFB8A005ED353 /* Projectiles */ = {
-			isa = PBXGroup;
-			children = (
-				70E106D81B2BF955005ED353 /* SmallBullet.swift */,
-				70E1072F1B2BFB3A005ED353 /* MediumBullet.swift */,
-				70E106D51B2BF955005ED353 /* Rocket.swift */,
-				70E106D11B2BF955005ED353 /* Projectile.swift */,
+				70E107BB1B2C05C0005ED353 /* Projectile.swift */,
+				70E107BF1B2C05C0005ED353 /* Rocket.swift */,
+				70E107C21B2C05C0005ED353 /* SmallBullet.swift */,
+				70E108121B2C05CE005ED353 /* MediumBullet.swift */,
 			);
 			name = Projectiles;
 			sourceTree = "<group>";
 		};
-		70E1073B1B2BFBCD005ED353 /* Structures */ = {
+		70E108251B2C069A005ED353 /* States */ = {
 			isa = PBXGroup;
 			children = (
-				70E106BC1B2BF954005ED353 /* GuardTurret.swift */,
-				70E106AA1B2BF954005ED353 /* BulletGuardTurret.swift */,
-				70E106AE1B2BF954005ED353 /* ChargingStation.swift */,
-				70E106BD1B2BF954005ED353 /* Headquarters.swift */,
-				70E106D31B2BF955005ED353 /* RepairStation.swift */,
-				70E106DB1B2BF955005ED353 /* Structure.swift */,
+				70E107BC1B2C05C0005ED353 /* Repairing.swift */,
+				70E107BE1B2C05C0005ED353 /* RepairUnit.swift */,
+				70E107C41B2C05C0005ED353 /* State.swift */,
+				70E107CC1B2C05C0005ED353 /* Wander.swift */,
+				70E108131B2C05CE005ED353 /* Recharge.swift */,
+				70E107901B2C05C0005ED353 /* Attack.swift */,
+				70E107A61B2C05C0005ED353 /* Guard.swift */,
+				70E107B41B2C05C0005ED353 /* MoveToHQ.swift */,
+				70E107B51B2C05C0005ED353 /* MoveToKnownEnemy.swift */,
+				70E107B61B2C05C0005ED353 /* MoveToOreDeposit.swift */,
+				70E107B71B2C05C0005ED353 /* MoveToWeakUnit.swift */,
+				70E107B81B2C05C0005ED353 /* NeedCharge.swift */,
+				70E107B91B2C05C0005ED353 /* NeedRepair.swift */,
 			);
-			name = Structures;
+			name = States;
 			sourceTree = "<group>";
 		};
-		70E1073C1B2BFBED005ED353 /* Scenes */ = {
+		70E108261B2C072F005ED353 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				70E106B81B2BF954005ED353 /* GameScene.swift */,
-				70E106C21B2BF955005ED353 /* LevelSelectScene.swift */,
-				70E106C81B2BF955005ED353 /* MenuScene.swift */,
-				70E106DF1B2BF955005ED353 /* TestScene.swift */,
-				70E106E11B2BF955005ED353 /* Tutorial.swift */,
-				70E1073D1B2BFBFD005ED353 /* SKS Files */,
+				70E107C91B2C05C0005ED353 /* TestScene.swift */,
+				70E107CB1B2C05C0005ED353 /* Tutorial.swift */,
+				70E108271B2C0749005ED353 /* SKS Files */,
+				70E107AC1B2C05C0005ED353 /* LevelSelectScene.swift */,
+				70E107B21B2C05C0005ED353 /* MenuScene.swift */,
+				70E107A31B2C05C0005ED353 /* GameScene.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
 		};
-		70E1073D1B2BFBFD005ED353 /* SKS Files */ = {
+		70E108271B2C0749005ED353 /* SKS Files */ = {
 			isa = PBXGroup;
 			children = (
-				70E106C11B2BF954005ED353 /* LevelSelectScene.sks */,
-				70E106C71B2BF955005ED353 /* MenuScene.sks */,
-				70E106DE1B2BF955005ED353 /* TestScene.sks */,
-				70E106E01B2BF955005ED353 /* Tutorial.sks */,
+				70E107AB1B2C05C0005ED353 /* LevelSelectScene.sks */,
+				70E107B11B2C05C0005ED353 /* MenuScene.sks */,
+				70E107C81B2C05C0005ED353 /* TestScene.sks */,
+				70E107CA1B2C05C0005ED353 /* Tutorial.sks */,
 			);
 			name = "SKS Files";
-			sourceTree = "<group>";
-		};
-		70E107421B2BFC8D005ED353 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				70E106B11B2BF954005ED353 /* DoorTransition.swift */,
-				70E106AD1B2BF954005ED353 /* Button.swift */,
-			);
-			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,24 +480,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E106F31B2BF955005ED353 /* drillSparks.sks in Resources */,
-				70E106F61B2BF955005ED353 /* explosionAutoSmoke.sks in Resources */,
-				70E107211B2BF955005ED353 /* Tutorial.sks in Resources */,
-				70E107871B2BFF1A005ED353 /* LaunchScreen.xib in Resources */,
-				70E107021B2BF955005ED353 /* LevelSelectScene.sks in Resources */,
-				70E106F51B2BF955005ED353 /* explosionAutoFire.sks in Resources */,
-				70E106E81B2BF955005ED353 /* Base.lproj in Resources */,
-				70E106EC1B2BF955005ED353 /* bulletTrail.sks in Resources */,
-				70E1071F1B2BF955005ED353 /* TestScene.sks in Resources */,
-				70E107331B2BFB3A005ED353 /* explosionStructureFire.sks in Resources */,
-				70E107001B2BF955005ED353 /* Images.xcassets in Resources */,
-				70E106ED1B2BF955005ED353 /* bulletTrailSmall.sks in Resources */,
-				70E107341B2BFB3A005ED353 /* explosionStructureSmoke.sks in Resources */,
-				70E106F71B2BF955005ED353 /* explosionBulletSmoke.sks in Resources */,
-				70E1071A1B2BF955005ED353 /* spark.png in Resources */,
-				70E107881B2BFF1A005ED353 /* Main.storyboard in Resources */,
-				70E107381B2BFB3A005ED353 /* rocketTrail.sks in Resources */,
-				70E107081B2BF955005ED353 /* MenuScene.sks in Resources */,
+				70E1080A1B2C05C0005ED353 /* Tutorial.sks in Resources */,
+				70E107D71B2C05C0005ED353 /* bulletTrail.sks in Resources */,
+				70E107EA1B2C05C0005ED353 /* Images.xcassets in Resources */,
+				70E107DD1B2C05C0005ED353 /* drillSparks.sks in Resources */,
+				70E107E01B2C05C0005ED353 /* explosionAutoSmoke.sks in Resources */,
+				70E107E11B2C05C0005ED353 /* explosionBulletSmoke.sks in Resources */,
+				70E107EB1B2C05C0005ED353 /* LevelSelectScene.sks in Resources */,
+				70E1081B1B2C05CE005ED353 /* rocketTrail.sks in Resources */,
+				70E108031B2C05C0005ED353 /* spark.png in Resources */,
+				70E108631B2C08D8005ED353 /* LaunchScreen.xib in Resources */,
+				70E108161B2C05CE005ED353 /* explosionStructureFire.sks in Resources */,
+				70E108621B2C08D8005ED353 /* Main.storyboard in Resources */,
+				70E108651B2C0906005ED353 /* Default-568h@2x.png in Resources */,
+				70E107D31B2C05C0005ED353 /* Base.lproj in Resources */,
+				70E108081B2C05C0005ED353 /* TestScene.sks in Resources */,
+				70E108171B2C05CE005ED353 /* explosionStructureSmoke.sks in Resources */,
+				70E107D81B2C05C0005ED353 /* bulletTrailSmall.sks in Resources */,
+				70E107DF1B2C05C0005ED353 /* explosionAutoFire.sks in Resources */,
+				70E107F11B2C05C0005ED353 /* MenuScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,62 +516,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E1070C1B2BF955005ED353 /* MoveToKnownEnemy.swift in Sources */,
-				70E107151B2BF955005ED353 /* RepairUnit.swift in Sources */,
-				70E106F81B2BF955005ED353 /* FSM.swift in Sources */,
-				70E107121B2BF955005ED353 /* Projectile.swift in Sources */,
-				70E1070E1B2BF955005ED353 /* MoveToWeakUnit.swift in Sources */,
-				70E106EB1B2BF955005ED353 /* BulletGuardTurret.swift in Sources */,
-				70E107361B2BFB3A005ED353 /* MediumBullet.swift in Sources */,
-				70E107031B2BF955005ED353 /* LevelSelectScene.swift in Sources */,
-				70E107201B2BF955005ED353 /* TestScene.swift in Sources */,
-				70E1070D1B2BF955005ED353 /* MoveToOreDeposit.swift in Sources */,
-				70E1071C1B2BF955005ED353 /* Structure.swift in Sources */,
-				70E107181B2BF955005ED353 /* ScatterShot.swift in Sources */,
-				70E107391B2BFB3A005ED353 /* Scout.swift in Sources */,
-				70E107161B2BF955005ED353 /* Rocket.swift in Sources */,
-				70E1071B1B2BF955005ED353 /* State.swift in Sources */,
-				70E107051B2BF955005ED353 /* MachineGunner.swift in Sources */,
-				70E106E61B2BF955005ED353 /* Auto.swift in Sources */,
-				70E106A21B2BF923005ED353 /* Artillery.swift in Sources */,
-				70E1071D1B2BF955005ED353 /* StructureExplosion.swift in Sources */,
-				70E107061B2BF955005ED353 /* MechanismAspects.swift in Sources */,
-				70E106EF1B2BF955005ED353 /* ChargingStation.swift in Sources */,
-				70E106FA1B2BF955005ED353 /* GameViewController.swift in Sources */,
-				70E107111B2BF955005ED353 /* OreDeposit.swift in Sources */,
-				70E106E51B2BF955005ED353 /* Attack.swift in Sources */,
-				70E106E91B2BF955005ED353 /* Boundary.swift in Sources */,
-				70E107171B2BF955005ED353 /* RocketExplosion.swift in Sources */,
-				70E107131B2BF955005ED353 /* Repairing.swift in Sources */,
-				70E1067E1B2BF8D1005ED353 /* AppDelegate.swift in Sources */,
-				70E107251B2BF955005ED353 /* World.swift in Sources */,
-				70E106F11B2BF955005ED353 /* DamageExplosion.swift in Sources */,
-				70E106FF1B2BF955005ED353 /* HealthBar.swift in Sources */,
-				70E106F91B2BF955005ED353 /* GameScene.swift in Sources */,
-				70E107141B2BF955005ED353 /* RepairStation.swift in Sources */,
-				70E107041B2BF955005ED353 /* LightArmor.swift in Sources */,
-				70E107231B2BF955005ED353 /* Wander.swift in Sources */,
-				70E106FC1B2BF955005ED353 /* Guard.swift in Sources */,
-				70E107191B2BF955005ED353 /* SmallBullet.swift in Sources */,
-				70E107371B2BFB3A005ED353 /* Recharge.swift in Sources */,
-				70E107351B2BFB3A005ED353 /* Mechanism.swift in Sources */,
-				70E106FB1B2BF955005ED353 /* General.swift in Sources */,
-				70E107071B2BF955005ED353 /* Medic.swift in Sources */,
-				70E107101B2BF955005ED353 /* NeedRepair.swift in Sources */,
-				70E1071E1B2BF955005ED353 /* Team.swift in Sources */,
-				70E106F41B2BF955005ED353 /* Explosion.swift in Sources */,
-				70E106FE1B2BF955005ED353 /* Headquarters.swift in Sources */,
-				70E106E71B2BF955005ED353 /* AutoExplosion.swift in Sources */,
-				70E106EA1B2BF955005ED353 /* BulletExplosion.swift in Sources */,
-				70E1070A1B2BF955005ED353 /* Miner.swift in Sources */,
-				70E107221B2BF955005ED353 /* Tutorial.swift in Sources */,
-				70E106EE1B2BF955005ED353 /* Button.swift in Sources */,
-				70E107241B2BF955005ED353 /* WeaponizedAuto.swift in Sources */,
-				70E1070B1B2BF955005ED353 /* MoveToHQ.swift in Sources */,
-				70E107091B2BF955005ED353 /* MenuScene.swift in Sources */,
-				70E1070F1B2BF955005ED353 /* NeedCharge.swift in Sources */,
-				70E106F21B2BF955005ED353 /* DoorTransition.swift in Sources */,
-				70E106FD1B2BF955005ED353 /* GuardTurret.swift in Sources */,
+				70E107F31B2C05C0005ED353 /* Miner.swift in Sources */,
+				70E107F01B2C05C0005ED353 /* Medic.swift in Sources */,
+				70E107FC1B2C05C0005ED353 /* Repairing.swift in Sources */,
+				70E107E41B2C05C0005ED353 /* GameViewController.swift in Sources */,
+				70E108191B2C05CE005ED353 /* MediumBullet.swift in Sources */,
+				70E107D11B2C05C0005ED353 /* Auto.swift in Sources */,
+				70E108181B2C05CE005ED353 /* Mechanism.swift in Sources */,
+				70E107F41B2C05C0005ED353 /* MoveToHQ.swift in Sources */,
+				70E108041B2C05C0005ED353 /* State.swift in Sources */,
+				70E107D41B2C05C0005ED353 /* Boundary.swift in Sources */,
+				70E107E61B2C05C0005ED353 /* Guard.swift in Sources */,
+				70E107F81B2C05C0005ED353 /* NeedCharge.swift in Sources */,
+				70E107E81B2C05C0005ED353 /* Headquarters.swift in Sources */,
+				70E108051B2C05C0005ED353 /* Structure.swift in Sources */,
+				70E107E71B2C05C0005ED353 /* GuardTurret.swift in Sources */,
+				70E107E91B2C05C0005ED353 /* HealthBar.swift in Sources */,
+				70E1081A1B2C05CE005ED353 /* Recharge.swift in Sources */,
+				70E107CF1B2C05C0005ED353 /* Artillery.swift in Sources */,
+				70E107F61B2C05C0005ED353 /* MoveToOreDeposit.swift in Sources */,
+				70E107DC1B2C05C0005ED353 /* DoorTransition.swift in Sources */,
+				70E108071B2C05C0005ED353 /* Team.swift in Sources */,
+				70E107E51B2C05C0005ED353 /* General.swift in Sources */,
+				70E107F91B2C05C0005ED353 /* NeedRepair.swift in Sources */,
+				70E1080B1B2C05C0005ED353 /* Tutorial.swift in Sources */,
+				70E108061B2C05C0005ED353 /* StructureExplosion.swift in Sources */,
+				70E107FF1B2C05C0005ED353 /* Rocket.swift in Sources */,
+				70E107DB1B2C05C0005ED353 /* DamageExplosion.swift in Sources */,
+				70E107ED1B2C05C0005ED353 /* LightArmor.swift in Sources */,
+				70E107D91B2C05C0005ED353 /* Button.swift in Sources */,
+				70E107E31B2C05C0005ED353 /* GameScene.swift in Sources */,
+				70E108001B2C05C0005ED353 /* RocketExplosion.swift in Sources */,
+				70E108011B2C05C0005ED353 /* ScatterShot.swift in Sources */,
+				70E108671B2C0A27005ED353 /* AppDelegate.swift in Sources */,
+				70E107DA1B2C05C0005ED353 /* ChargingStation.swift in Sources */,
+				70E108021B2C05C0005ED353 /* SmallBullet.swift in Sources */,
+				70E107D01B2C05C0005ED353 /* Attack.swift in Sources */,
+				70E107FD1B2C05C0005ED353 /* RepairStation.swift in Sources */,
+				70E1080E1B2C05C0005ED353 /* World.swift in Sources */,
+				70E107D61B2C05C0005ED353 /* BulletGuardTurret.swift in Sources */,
+				70E1080D1B2C05C0005ED353 /* WeaponizedAuto.swift in Sources */,
+				70E108091B2C05C0005ED353 /* TestScene.swift in Sources */,
+				70E107E21B2C05C0005ED353 /* FSM.swift in Sources */,
+				70E107D51B2C05C0005ED353 /* BulletExplosion.swift in Sources */,
+				70E107F51B2C05C0005ED353 /* MoveToKnownEnemy.swift in Sources */,
+				70E107F21B2C05C0005ED353 /* MenuScene.swift in Sources */,
+				70E1081C1B2C05CE005ED353 /* Scout.swift in Sources */,
+				70E107D21B2C05C0005ED353 /* AutoExplosion.swift in Sources */,
+				70E107EC1B2C05C0005ED353 /* LevelSelectScene.swift in Sources */,
+				70E107FB1B2C05C0005ED353 /* Projectile.swift in Sources */,
+				70E107EF1B2C05C0005ED353 /* MechanismAspects.swift in Sources */,
+				70E107EE1B2C05C0005ED353 /* MachineGunner.swift in Sources */,
+				70E107FE1B2C05C0005ED353 /* RepairUnit.swift in Sources */,
+				70E107DE1B2C05C0005ED353 /* Explosion.swift in Sources */,
+				70E107F71B2C05C0005ED353 /* MoveToWeakUnit.swift in Sources */,
+				70E107FA1B2C05C0005ED353 /* OreDeposit.swift in Sources */,
+				70E1080C1B2C05C0005ED353 /* Wander.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +679,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Battle Bots/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Battle Bots/Base.lproj/Battle Bots/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -698,7 +689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Battle Bots/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Battle Bots/Base.lproj/Battle Bots/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

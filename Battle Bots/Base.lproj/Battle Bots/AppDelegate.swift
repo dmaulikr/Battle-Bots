@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Bot Warefare
+//  Battle Bots
 //
-//  Created by Alec Shedelbower on 5/28/15.
+//  Created by Alec Shedelbower on 6/13/15.
 //  Copyright (c) 2015 Alec Shedelbower. All rights reserved.
 //
 
