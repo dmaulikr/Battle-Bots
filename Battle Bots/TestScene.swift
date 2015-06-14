@@ -16,39 +16,81 @@ class TestScene: GameScene {
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
-        world!.changeBoundaryTo("Boundary_1")
+        world!.changeBoundaryTo("Boundary_2")
         
         let team1 = Team(name: "Player")
         let team2 = Team(name: "Enemy")
         
-        let ore = OreDeposit(size: .Medium, world: world!)
-        world?.addChild(ore)
-        ore.position = CGPoint(x: 0, y: 200)
+//        let ore = OreDeposit(size: .Huge, world: world!)
+//        world?.addChild(ore)
+//        ore.position = CGPoint(x: -200, y: 800)
         
+        let ore2 = OreDeposit(size: .Huge  , world: world!)
+        world?.addChild(ore2)
+        ore2.position = CGPoint(x: -200, y: -800)
+        
+//        let ore3 = OreDeposit(size: .Huge, world: world!)
+//        world?.addChild(ore3)
+//        ore3.position = CGPoint(x: 200, y: 800)
+        
+        let ore4 = OreDeposit(size: .Huge  , world: world!)
+        world?.addChild(ore4)
+        ore4.position = CGPoint(x: 200, y: -800)
+        
+        
+        let HQ = Headquarters(team: team1, world: world!)
+        HQ.doAdditionalSetUp()
+        world?.addChild(HQ)
+        HQ.position = CGPoint(x: 0, y: 650)
+        
+        let HQ2 = Headquarters(team: team2, world: world!)
+        HQ2.doAdditionalSetUp()
+        world?.addChild(HQ2)
+        HQ2.position = CGPoint(x: 0, y: -650)
         
         let miner = Miner(team: team1, world: world!)
         miner.doAdditionalSetUp()
         world!.addChild(miner)
-        miner.position = CGPoint(x: 0, y: 0)
+        miner.position = CGPoint(x: 0, y: 200)
         
-//        let CS = ChargingStation(team: team2, world: world!)
-//        CS.doAdditionalSetUp()
-//        CS.position = CGPoint(x: 100, y: 200)
-//        world?.addChild(CS)
+        let miner2 = Miner(team: team2, world: world!)
+        miner2.doAdditionalSetUp()
+        world!.addChild(miner2)
+        miner2.position = CGPoint(x: 200, y: -700)
         
-//        let CS2 = ChargingStation(team: team1, world: world!)
-//        CS2.doAdditionalSetUp()
-//        CS2.position = CGPoint(x: -100, y: -200)
-//        world?.addChild(CS2)
+        let miner3 = Miner(team: team2, world: world!)
+        miner3.doAdditionalSetUp()
+        world!.addChild(miner3)
+        miner3.position = CGPoint(x: 50, y: 200)
         
-//        let BGT = BulletGuardTurret(team: team1, world: world!)
-//        BGT.doAdditionalSetUp()
-//        BGT.position = CGPoint(x: 0, y: -200)
-//        world?.addChild(BGT)
-//        
+        let CS = ChargingStation(team: team1, world: world!)
+        CS.doAdditionalSetUp()
+        CS.position = CGPoint(x: 150, y: 500)
+        world?.addChild(CS)
+        
+        let CS2 = ChargingStation(team: team2, world: world!)
+        CS2.doAdditionalSetUp()
+        CS2.position = CGPoint(x: -150, y: -500)
+        world?.addChild(CS2)
+        
+        let RS = RepairStation(team: team1, world: world!)
+        RS.doAdditionalSetUp()
+        RS.position = CGPoint(x: -150, y: 500)
+        world?.addChild(RS)
+        
+        let RS2 = RepairStation(team: team2, world: world!)
+        RS2.doAdditionalSetUp()
+        RS2.position = CGPoint(x: 150, y: -500)
+        world?.addChild(RS2)
+        
+        let BGT = BulletGuardTurret(team: team1, world: world!)
+        BGT.doAdditionalSetUp()
+        BGT.position = CGPoint(x: 0, y: 400)
+        world?.addChild(BGT)
+        
 //        let BGT2 = BulletGuardTurret(team: team2, world: world!)
 //        BGT2.doAdditionalSetUp()
-//        BGT2.position = CGPoint(x: 0, y: 200)
+//        BGT2.position = CGPoint(x: 0, y: -400)
 //        world?.addChild(BGT2)
         
 //        scout = Scout(team: team1, world: world!)
@@ -148,7 +190,7 @@ class TestScene: GameScene {
 //        world?.addChild(machineGunner3)
 //        world?.addChild(machineGunner4)
         
-        self.makeSightNodesHidden(false)
+        self.makeSightNodesHidden(true)
     }
     
     

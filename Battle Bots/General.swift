@@ -18,6 +18,11 @@ let tertiaryFont = ""
 let autosScale:CGFloat = 0.25
 let structuresScale: CGFloat = 0.5
 let doorTransitionScale: CGFloat = 0.75
+//OreScales
+let oreScaleSmall:CGFloat = 0.2
+let oreScaleMedium:CGFloat = 0.4
+let oreScaleLarge:CGFloat = 0.5
+let oreScaleHuge:CGFloat = 0.75
 
 //Colors
 let sightNodeFillColor = SKColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 0.05)
@@ -94,6 +99,7 @@ enum autoType {
     case MachineGunner
     case ScatterShot
     case Artillery
+    case Engineer
 }
 
 enum structureType {
@@ -113,8 +119,19 @@ enum physicsCategory: UInt32 {
     case Sight = 16
     case Explosion = 32
     case Ore = 64
-    case Shield = 128
+    //case Shield = 128
 }
+
+//enum physicsCategory: UInt32 {
+//    case None = 0
+//    case Auto = 0b0000001
+//    case Structure = 0b0000010
+//    case Projectile = 0b0000100
+//    case Sight = 0b0001000
+//    case Explosion = 0b0010000
+//    case Ore = 0b0100000
+//    case Shield = 0b1000000
+//}
 
 enum healthBarType {
     case Structure
@@ -139,6 +156,12 @@ enum stateType {
     case MoveToWeakUnit
     case RepairUnit
     case MoveToHQ
+    case MoveToOreDeposit
+    case MineOre
+    case MoveToDeliverOre
+    case DeliverOre
+    
+    case BuildAutos
 }
 
 //State Priorities
@@ -153,7 +176,13 @@ let attackingPriority: Int = 9
 let moveToKnownEnemyPriority: Int = 15
 let moveToWeakUnitPriority: Int = 13
 let repairUnitPriority: Int = 12
-let moveToHQPriority:Int = 17
+let moveToHQPriority:Int = 21
+let moveToOreDepositPriority: Int = 20
+let mineOrePriority: Int = 17
+let moveToDeliverOrePriority: Int = 19
+let deliverOrePriority: Int = 18
+
+let buildAutosPriority: Int = 1
 
 //Functions
 func rotateNodeTowardsPoint(node: SKNode, point: CGPoint, speed: CGFloat) {
@@ -190,5 +219,67 @@ func getPointWithinRange(range: Int, ofPoint: CGPoint) -> CGPoint {
     let randomPoint = CGPoint(x: randX, y: randY)
     return randomPoint
 }
+
+func getOreCostOfAutoType(type: autoType) -> CGFloat {
+    switch type {
+    case .LightArmor:
+        return lightArmorOreCost
+    case .Scout:
+        return scoutOreCost
+    case .MachineGunner:
+        return machineGunnerOreCost
+    case .ScatterShot:
+        return scatterShotOreCost
+    case .Miner:
+        return minerOreCost
+    case .Medic:
+        return medicOreCost
+    case .Artillery:
+        return artilleryOreCost
+    default:
+        fatalError("ERROR: Unknown autoType '\(type)' in 'getOreCostOfAutoType'")
+    }
+}
+
+func makeAuto(world: World, team: Team, position: CGPoint, type: autoType) {
+    var auto: Auto?
+    switch type {
+    case .Artillery:
+        auto = Artillery(team: team, world: world)
+    case .MachineGunner:
+        auto = MachineGunner(team: team, world: world)
+    case .LightArmor:
+        auto = LightArmor(team: team, world: world)
+    case .ScatterShot:
+        auto = ScatterShot(team: team, world: world)
+    case .Scout:
+        auto = Scout(team: team, world: world)
+    case .Miner:
+        auto = Miner(team: team, world: world)
+    case .Medic:
+        auto = Medic(team: team, world: world)
+    default:
+        fatalError("ERROR: Unknown autoType '\(type)' in 'makeAuto' function")
+    }
+    
+    auto?.position = position
+    auto?.doAdditionalSetUp()
+    world.addChild(auto!)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

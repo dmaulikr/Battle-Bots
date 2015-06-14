@@ -12,8 +12,17 @@ import SpriteKit
 //AUTOS
 let autoMaxGuardPostitions: Int = 2
 
+//Engineer
+let engineerOreCost: CGFloat = 200
+let engineerHealth: CGFloat = 20
+let engineerEnergy: CGFloat = 100
+let engineerSightRadius: CGFloat = 50
+let engineerBaseSpeed: CGFloat = 50
+let engineerBaseRotateSpeed: CGFloat = 2
+let engineerStates: [stateType] = [.Wander, .NeedRepair, .Repairing, .NeedCharge, .Recharge]
 
 //Scout
+let scoutOreCost: CGFloat = 50
 let scoutHealth: CGFloat = 20
 let scoutEnergy: CGFloat = 100
 let scoutSightRadius: CGFloat = 200
@@ -22,16 +31,19 @@ let scoutBaseRotateSpeed: CGFloat = 3
 let scoutStates: [stateType] = [.Wander, .NeedRepair, .Repairing, .NeedCharge, .Recharge]
 
 //Miner
+let minerOreCost: CGFloat = 75
 let minerHealth: CGFloat = 20
 let minerEnergy: CGFloat = 100
 let minerSightRadius: CGFloat = 200
 let minerBaseSpeed: CGFloat = 75
 let minerBaseRotateSpeed: CGFloat = 3
-let minerMineAmount: CGFloat = 2
-let minerStates: [stateType] = [.Wander, .NeedRepair, .Repairing, .NeedCharge, .Recharge]
+let minerMineAmount: CGFloat = 50
+let minerOreMaxCapacity: CGFloat = 150
+let minerStates: [stateType] = [.MoveToHQ, .MoveToDeliverOre, .DeliverOre, .MoveToOreDeposit, .MineOre, .NeedRepair, .Repairing, .NeedCharge, .Recharge]
 
 
 //Medic
+let medicOreCost: CGFloat = 200
 let medicHealth: CGFloat = 10
 let medicEnergy: CGFloat = 200
 let medicSightRadius: CGFloat = 100
@@ -42,6 +54,7 @@ let medicStates: [stateType] = [.MoveToHQ, .NeedRepair, .Repairing, .NeedCharge,
 
 
 //LightArmor
+let lightArmorOreCost: CGFloat = 100
 let lightArmorHealth: CGFloat = 40
 let lightArmorEnergy: CGFloat = 100
 let lightArmorSightRadius: CGFloat = 120
@@ -52,6 +65,7 @@ let lightArmorStates: [stateType] = [.Wander, .NeedRepair, .Repairing, .Attack, 
 
 
 //MachineGunner
+let machineGunnerOreCost: CGFloat = 200
 let machineGunnerHealth: CGFloat = 50
 let machineGunnerEnergy: CGFloat = 120
 let machineGunnerSightRadius: CGFloat = 140
@@ -61,6 +75,7 @@ let machineGunnerTurretRotateSpeed: CGFloat = 2
 let machineGunnerStates: [stateType] = [.Wander, .NeedRepair, .Repairing, .Attack, .NeedCharge, .Recharge, .MoveToKnownEnemy]
 
 //ScatterShot
+let scatterShotOreCost: CGFloat = 250
 let scatterShotHealth: CGFloat = 50
 let scatterShotEnergy: CGFloat = 120
 let scatterShotSightRadius: CGFloat = 100
@@ -72,6 +87,7 @@ let scatterShotStates: [stateType] = [.Wander, .NeedRepair, .Repairing, .Attack,
 let scatterShotBulletsPerShot: Int = 6
 
 //Artillery
+let artilleryOreCost: CGFloat = 1000
 let artilleryHealth: CGFloat = 100
 let artilleryEnergy: CGFloat = 200
 let artillerySightRadius: CGFloat = 300
@@ -94,6 +110,7 @@ let bulletGuardTurretStates: [stateType] = [.Attack]
 //Headquarters
 let HQHealth: CGFloat = 400
 let HQSightRadius: CGFloat = 300
+let HQStates: [stateType] = [.BuildAutos]
 
 
 //Repair Station
@@ -131,14 +148,16 @@ let smallBulletRange: CGFloat = 200
 let smallBulletMovementSpeed: CGFloat = 0.5
 
 //ORES
+let oreScale: CGFloat = 0.5
+
 let smallOreAmount:CGFloat = 300
 let mediumOreAmount: CGFloat = 600
 let largeOreAmount: CGFloat = 1000
-let hugeOreAmount: CGFloat = 1500
+let hugeOreAmount: CGFloat = 2000
 
-let smallOreRadius:CGFloat = 10
-let mediumOreRadius: CGFloat = 20
-let largeOreRadius: CGFloat = 30
-let hugeOreRadius: CGFloat = 50
+let smallOreRadius:CGFloat = 25 * oreScale
+let mediumOreRadius: CGFloat = 40 * oreScale
+let largeOreRadius: CGFloat = 60 * oreScale
+let hugeOreRadius: CGFloat = 100 * oreScale
 
 

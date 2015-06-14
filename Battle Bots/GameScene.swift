@@ -76,7 +76,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         world?.enumerateChildNodesWithName("\(mechanismName)*") {
             node, stop in
             if let auto = node as? Auto {
-                auto.sightNode.hidden = hidden
+                auto.sightNode!.hidden = hidden
             }
             if let structure = node as? Structure {
                 structure.sightNode!.hidden = hidden
@@ -113,13 +113,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
         
-        world?.enumerateChildNodesWithName("\(mechanismName)*") {
-            node, stop in
-            if let miner = node as? Miner {
-                let ore = self.world?.childNodeWithName("ore1") as! OreDeposit
-                miner.mine(ore)
-            }
-        }
+//        world?.enumerateChildNodesWithName("\(mechanismName)*") {
+//            node, stop in
+//            if let miner = node as? Miner {
+//                let ore = self.world?.childNodeWithName("ore1") as! OreDeposit
+//                miner.mine(ore)
+//            }
+//        }
         
         for touch in (touches as! Set<UITouch>) {
             currentTouches.append(touch)
@@ -206,7 +206,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func updateMechanisms() {
-        
         world?.enumerateChildNodesWithName("\(mechanismName)*") {
             node, stop in
             if let mechanism = node as? Mechanism {
@@ -487,6 +486,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         case physicsCategory.Projectile.rawValue | physicsCategory.Projectile.rawValue:
             let projectile1 = contact.bodyA.node?.parent as! Projectile
             let projectile2 = contact.bodyB.node?.parent as! Projectile
+            
         case physicsCategory.Ore.rawValue | physicsCategory.Auto.rawValue:
             if contact.bodyA.node != nil && contact.bodyB.node != nil {
                 var oreDeposit: OreDeposit

@@ -24,7 +24,6 @@ class Structure: Mechanism {
     var type: structureType = .Default
     var healthBar = HealthBar(type: .Structure)
     var buildingNode = SKNode()
-    var sightNode: SKShapeNode?
     var sightRadius: CGFloat?
     
     override init(team: Team, world: World) {

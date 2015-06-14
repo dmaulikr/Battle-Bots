@@ -18,6 +18,8 @@ class Mechanism: SKNode {
     var fsm: FSM? = nil
     var mechType: mechanismType? = nil
     
+    var oreCost: CGFloat?
+    
     var guards = [Mechanism]()
     var maxGuardPositions: Int = 4
     
@@ -29,6 +31,8 @@ class Mechanism: SKNode {
     
     var enemyStructuresInSight = [Structure]()
     var enemyAutosInSight = [Auto]()
+    
+    var sightNode: SKShapeNode?
     
     init(team: Team, world: World) {
         
@@ -213,6 +217,9 @@ class Mechanism: SKNode {
         //Sets up the team and fsm of the mechanism
         self.addToTeam()
         self.fsm?.setNewTarget(self)
+        if self.sightNode != nil {
+            self.sightNode?.hidden = true
+        }
     }
     
     func addToTeam() {

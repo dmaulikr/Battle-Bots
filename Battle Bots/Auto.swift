@@ -34,7 +34,7 @@ class Auto: Mechanism {
     var mobilityNode = SKSpriteNode()
     var healthBar = HealthBar(type: .Auto)
     
-    var sightNode = SKShapeNode()
+//    var sightNode = SKShapeNode()
     
     var type: autoType = .Default
     

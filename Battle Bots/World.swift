@@ -34,6 +34,8 @@ class World: SKNode {
         if self.boundary?.parent != nil {
             self.boundary?.removeFromParent()
         }
+        println(self.boundary?.parent)
+        println("REmoving Old Boundary")
         self.boundary = Boundary(imageName: boundaryImageName)
         self.addChild(boundary!)
     }

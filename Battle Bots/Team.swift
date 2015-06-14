@@ -22,6 +22,11 @@ class Team {
     var knownEnemyAutos = [Auto]()
     var knownOreDeposits = [OreDeposit]()
     
+    var autosOfType = [autoType:[Auto]]()
+    var structuresOfType = [structureType:[Structure]]()
+    
+    var oreAmount: CGFloat = 0
+    
     init(name: String) {
         self.name = name
     }
@@ -34,7 +39,16 @@ class Team {
         self.mechanisms.append(mechanism)
         if mechanism.mechType == .Structure {
             let structure = mechanism as! Structure
+            
             self.structures.append(structure)
+            
+            if self.structuresOfType[structure.type] == nil {
+                self.structuresOfType[structure.type] = [structure]
+            }
+            else {
+                self.structuresOfType[structure.type]!.append(structure)
+            }
+            
             switch structure.type {
             case .ChargingStation:
                 self.chargingStations.append(structure as! ChargingStation)
@@ -50,6 +64,14 @@ class Team {
         }
         if mechanism.mechType == .Auto {
             let auto = mechanism as! Auto
+            
+            if self.autosOfType[auto.type] == nil {
+                self.autosOfType[auto.type] = [auto]
+            }
+            else {
+                self.autosOfType[auto.type]!.append(auto)
+            }
+            
             self.autos.append(auto)
         }
     }
@@ -60,12 +82,20 @@ class Team {
         }
         if mechanism.mechType == .Structure {
             let structure = mechanism as! Structure
+            if contains(self.structuresOfType[structure.type]!, structure) {
+                self.structuresOfType[structure.type]!.removeAtIndex(find(self.structuresOfType[structure.type]!, structure)!)
+            }
+            
             if contains(self.structures, structure) {
                 self.structures.removeAtIndex(find(self.structures, structure)!)
             }
         }
         if mechanism.mechType == .Auto {
             let auto = mechanism as! Auto
+            if contains(self.autosOfType[auto.type]!, auto) {
+                self.autosOfType[auto.type]!.removeAtIndex(find(self.autosOfType[auto.type]!, auto)!)
+            }
+            
             if contains(self.autos, auto) {
                 self.autos.removeAtIndex(find(self.autos, auto)!)
             }
@@ -117,6 +147,10 @@ class Team {
         if contains(self.knownOreDeposits, oreDeposit) {
             self.knownOreDeposits.removeAtIndex(find(self.knownOreDeposits, oreDeposit)!)
         }
+    }
+    
+    func depositOre(amount: CGFloat) {
+        self.oreAmount += amount
     }
     
     

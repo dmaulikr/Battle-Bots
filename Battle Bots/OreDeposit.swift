@@ -33,22 +33,28 @@ class OreDeposit: SKNode {
         case .Small:
             self.amount = smallOreAmount
             self.physicsRadius = smallOreRadius
-            spriteImageName = "ChargingStation_2"
+            spriteImageName = "OreDepositSmall"
         case .Medium:
             self.amount = mediumOreAmount
             self.physicsRadius = mediumOreRadius
-            spriteImageName = "ChargingStation_2"
+            spriteImageName = "OreDepositMedium"
         case .Large:
             self.amount = largeOreAmount
             self.physicsRadius = largeOreRadius
-            spriteImageName = "ChargingStation_2"
+            spriteImageName = "OreDepositLarge"
         case .Huge:
             self.amount = hugeOreAmount
             self.physicsRadius = hugeOreRadius
-            spriteImageName = "ChargingStation_2"
+            spriteImageName = "OreDepositHuge"
         }
         
-        self.spriteNode = SKSpriteNode(imageNamed: spriteImageName)
+        let defaultTexture = SKTexture(imageNamed: "OreDepositHuge")
+        let texture = SKTexture(imageNamed: spriteImageName)
+        
+        self.spriteNode = SKSpriteNode(texture: defaultTexture)
+        self.spriteNode.texture = texture
+        self.spriteNode.setScale(oreScale)
+        
         
         super.init()
         
@@ -56,16 +62,18 @@ class OreDeposit: SKNode {
         self.name = "ore\(oreNameCount)"
         
         self.physicsNode.physicsBody = SKPhysicsBody(circleOfRadius: 1)
-        self.physicsBody?.affectedByGravity = false
-        self.physicsBody?.categoryBitMask = physicsCategory.Ore.rawValue
-        self.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
-        self.physicsBody?.contactTestBitMask = physicsCategory.Sight.rawValue | physicsCategory.Auto.rawValue
-    
+        self.physicsNode.physicsBody?.affectedByGravity = false
+        self.physicsNode.physicsBody?.categoryBitMask = physicsCategory.Ore.rawValue
+        self.physicsNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
+        self.physicsNode.physicsBody?.contactTestBitMask = physicsCategory.Sight.rawValue | physicsCategory.Auto.rawValue
+        
 
         self.addChild(physicsNode)
         self.addChild(spriteNode)
         
+        
         self.physicsNode.setScale(self.physicsRadius)
+
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -74,6 +82,36 @@ class OreDeposit: SKNode {
     
     func update() {
         
+        if self.amount > largeOreAmount {
+            self.size = .Huge
+            var texture = SKTexture(imageNamed: "OreDepositHuge")
+            self.physicsRadius = hugeOreRadius
+            self.spriteNode.texture = texture
+        }
+        else if self.amount > mediumOreAmount {
+            self.size = .Large
+            var texture = SKTexture(imageNamed: "OreDepositLarge")
+            self.physicsRadius = largeOreRadius
+            self.spriteNode.texture = texture
+        }
+        else if self.amount > smallOreAmount {
+            self.size = .Medium
+            var texture = SKTexture(imageNamed: "OreDepositMedium")
+            self.physicsRadius = mediumOreRadius
+            self.spriteNode.texture = texture
+        }
+        else {
+            self.size = .Small
+            var texture = SKTexture(imageNamed: "OreDepositSmall")
+            self.physicsRadius = smallOreRadius
+            self.spriteNode.texture = texture
+        }
+        
+        resizePhysicsNode()
+    }
+    
+    func resizePhysicsNode() {
+        self.physicsNode.setScale(self.physicsRadius)
     }
     
     func removeFromArrays() {
@@ -81,6 +119,9 @@ class OreDeposit: SKNode {
             node, stop in
             if let mechanism = node as? Mechanism {
                 mechanism.team.removeOreDeposit(self)
+                if let miner = mechanism as? Miner {
+                    miner.didEndCollisionWithOreDeposit(self)
+                }
             }
         }
     }
@@ -94,6 +135,9 @@ class OreDeposit: SKNode {
         self.amount -= amount
         if self.amount <= 0 {
             self.destroy()
+        }
+        else {
+            self.update()
         }
     }
     

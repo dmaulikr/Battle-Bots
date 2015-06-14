@@ -31,6 +31,7 @@ class Artillery: WeaponizedAuto {
         self.name! += "artillery\(artilleryNameCount)"
         
         self.type = .Artillery
+        self.oreCost = artilleryOreCost
         self.health = artilleryHealth
         self.maxHealth = artilleryHealth
         self.energy = artilleryEnergy
@@ -41,8 +42,8 @@ class Artillery: WeaponizedAuto {
         self.turretRotateSpeed = artilleryTurretRotateSpeed
         
         self.sightNode = SKShapeNode(circleOfRadius: self.sightRadius!)
-        self.sightNode.fillColor = sightNodeFillColor
-        self.sightNode.strokeColor = sightNodeStrokeColor
+        self.sightNode!.fillColor = sightNodeFillColor
+        self.sightNode!.strokeColor = sightNodeStrokeColor
         
         self.chassisNode = SKSpriteNode(imageNamed: "HeavyChassis")
         self.chassisNode.setScale(autosScale)
@@ -50,7 +51,7 @@ class Artillery: WeaponizedAuto {
         self.mobilityNode = SKSpriteNode(imageNamed: "HeavyWheels")
         self.mobilityNode.setScale(autosScale)
         
-        self.sightNode.zPosition = 1
+        self.sightNode!.zPosition = 1
         self.mobilityNode.zPosition = 2
         self.chassisNode.zPosition = 3
         self.turretNode!.zPosition = 4
@@ -61,15 +62,15 @@ class Artillery: WeaponizedAuto {
         self.bodyNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
         self.bodyNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Structure.rawValue
         
-        self.sightNode.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
-        self.sightNode.physicsBody?.affectedByGravity = false
-        self.sightNode.physicsBody?.categoryBitMask = physicsCategory.Sight.rawValue
-        self.sightNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
-        self.sightNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Projectile.rawValue
+        self.sightNode!.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
+        self.sightNode!.physicsBody?.affectedByGravity = false
+        self.sightNode!.physicsBody?.categoryBitMask = physicsCategory.Sight.rawValue
+        self.sightNode!.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
+        self.sightNode!.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Ore.rawValue
         
         
         self.addChild(self.bodyNode)
-        self.addChild(self.sightNode)
+        self.addChild(self.sightNode!)
         self.addChild(self.healthBar)
         self.bodyNode.addChild(mobilityNode)
         self.bodyNode.addChild(chassisNode)

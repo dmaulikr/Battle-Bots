@@ -45,7 +45,6 @@ class Wander: State {
     }
     
     override func canBeActive() -> Bool {
-        println("Checking Wander State")
         if target?.mechType == .Auto {
             return conditionsMet()
         }

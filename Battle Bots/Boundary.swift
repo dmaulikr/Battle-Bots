@@ -18,7 +18,7 @@ class Boundary: SKNode {
     init(imageName: String) {
         
         
-        self.backgroundNode = SKSpriteNode(imageNamed: "Boundary_1")
+        self.backgroundNode = SKSpriteNode(imageNamed: imageName)
         self.backgroundNode.setScale(structuresScale)
         self.backgroundNode.zPosition = -1
         

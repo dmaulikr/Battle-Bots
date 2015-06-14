@@ -111,6 +111,33 @@ class State {
         return false
     }
     
+    func touchingOreDeposit() -> Bool {
+        if let miner = self.target as? Miner {
+            if miner.oreDepositsInContactWith.isEmpty == false {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func canCarryMoreOre() -> Bool {
+        if let miner = self.target as? Miner {
+            if miner.oreAmount < miner.oreMaxCapacity {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func hasOre() -> Bool {
+        if let miner = self.target as? Miner {
+            if miner.oreAmount > 0 {
+                return true
+            }
+        }
+        return false
+    }
+    
     func touchingWeakMechanism(healthThreshold: CGFloat) -> Bool {
         let mechanismsInContactWith: [Mechanism] = self.target!.structuresInContactWith as [Mechanism] + self.target!.autosInContactWith as [Mechanism]
         for _mechanism in mechanismsInContactWith {
@@ -146,6 +173,13 @@ class State {
     
     func teamKnowsEnemyStructure() -> Bool {
         if self.target!.team.knownEnemyAutos.isEmpty == false || self.target!.team.knownEnemyStructures.isEmpty == false {
+            return true
+        }
+        return false
+    }
+    
+    func teamKnowsOreDeposit() -> Bool {
+        if self.target?.team.knownOreDeposits.isEmpty == false {
             return true
         }
         return false
@@ -189,6 +223,13 @@ class State {
         default:
             fatalError("Unknown type \(type) in canSeeEnemyMechanismOfType")
         }
+    }
+    
+    func teamHasOreAmountGreaterThanOrEqualTo(amount: CGFloat) -> Bool {
+        if self.target?.team.oreAmount >= amount {
+            return true
+        }
+        return false
     }
     
 }

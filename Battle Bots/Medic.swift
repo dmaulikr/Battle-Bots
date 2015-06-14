@@ -30,6 +30,7 @@ class Medic: Auto {
         self.name! += "medic\(medicNameCount)"
         
         self.type = .Medic
+        self.oreCost = medicOreCost
         self.health = medicHealth
         self.maxHealth = medicHealth
         self.energy = medicEnergy
@@ -39,8 +40,8 @@ class Medic: Auto {
         self.sightRadius = medicSightRadius
         
         self.sightNode = SKShapeNode(circleOfRadius: self.sightRadius!)
-        self.sightNode.fillColor = sightNodeFillColor
-        self.sightNode.strokeColor = sightNodeStrokeColor
+        self.sightNode!.fillColor = sightNodeFillColor
+        self.sightNode!.strokeColor = sightNodeStrokeColor
         
         self.chassisNode = SKSpriteNode(imageNamed: "Chassis")
         self.chassisNode.setScale(autosScale)
@@ -48,7 +49,7 @@ class Medic: Auto {
         self.mobilityNode = SKSpriteNode(imageNamed: "Wheels")
         self.mobilityNode.setScale(autosScale)
         
-        self.sightNode.zPosition = 1
+        self.sightNode!.zPosition = 1
         self.mobilityNode.zPosition = 2
         self.chassisNode.zPosition = 3
         self.crossNode.zPosition = 4
@@ -59,15 +60,15 @@ class Medic: Auto {
         self.bodyNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
         self.bodyNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Structure.rawValue
         
-        self.sightNode.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
-        self.sightNode.physicsBody?.affectedByGravity = false
-        self.sightNode.physicsBody?.categoryBitMask = physicsCategory.Sight.rawValue
-        self.sightNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
-        self.sightNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Projectile.rawValue
+        self.sightNode!.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
+        self.sightNode!.physicsBody?.affectedByGravity = false
+        self.sightNode!.physicsBody?.categoryBitMask = physicsCategory.Sight.rawValue
+        self.sightNode!.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
+        self.sightNode!.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Ore.rawValue
         
         
         self.addChild(self.bodyNode)
-        self.addChild(self.sightNode)
+        self.addChild(self.sightNode!)
         self.addChild(self.healthBar)
         self.bodyNode.addChild(mobilityNode)
         self.bodyNode.addChild(chassisNode)

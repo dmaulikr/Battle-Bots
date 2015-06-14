@@ -1,40 +1,39 @@
 //
-//  MoveToOreDeposit.swift
+//  MineOre.swift
 //  Battle Bots
 //
-//  Created by Alec Shedelbower on 6/13/15.
+//  Created by Alec Shedelbower on 6/14/15.
 //  Copyright (c) 2015 Alec Shedelbower. All rights reserved.
 //
 
 import Foundation
 import SpriteKit
 
-class MoveToOreDeposit: State {
+class MineOre: State {
     
     override var type: stateType? {
-        get {return .MoveToOreDeposit}
-        set {self.type = .MoveToOreDeposit}
+        get {return .MineOre}
+        set {self.type = .MineOre}
     }
     
     override var priority: Int {
-        get {return moveToOreDepositPriority}
-        set {self.priority = moveToOreDepositPriority}
+        get {return mineOrePriority}
+        set {self.priority = mineOrePriority}
     }
-
+    
     var closestOreDeposit: OreDeposit? = nil
     
     
     override func deactivate() {
         super.deactivate()
         self.closestOreDeposit = nil
-        if let auto = self.target as? Auto {
-            auto.removeActionForKey(keyMoveTo)
-            auto.bodyNode.removeActionForKey(keyRotateTowardsPoint)
-        }
     }
     
     override func conditionsMet() -> Bool {
-        if teamKnowsOreDeposit() == false {
+        if self.touchingOreDeposit() == false {
+            return false
+        }
+        else if self.canCarryMoreOre() == false {
             return false
         }
         else {
@@ -53,10 +52,11 @@ class MoveToOreDeposit: State {
     
     override func run() {
         if self.closestOreDeposit == nil {
-            if let auto = self.target as? Auto {
-                if findClosestOreDeposit() {
-                    auto.moveTo(self.closestOreDeposit!.position, speed: auto.baseSpeed!, rotateSpeed: auto.baseRotateSpeed!)
-                }
+            self.findClosestOreDeposit()
+        }
+        else if let miner = self.target as? Miner {
+            if miner.oreAmount < miner.oreMaxCapacity {
+                miner.mine(self.closestOreDeposit!)
             }
         }
     }

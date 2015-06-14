@@ -25,7 +25,6 @@ class FSM {
     
     init(_states: [stateType]) {
         if contains(_states, .Wander) {
-            println("Adding Wander State")
             self.states.append(Wander())
         }
         if contains(_states, .Guard) {
@@ -57,6 +56,21 @@ class FSM {
         }
         if contains(_states, .MoveToHQ) {
             self.states.append(MoveToHQ())
+        }
+        if contains(_states, .MoveToOreDeposit) {
+            self.states.append(MoveToOreDeposit())
+        }
+        if contains(_states, .MineOre) {
+            self.states.append(MineOre())
+        }
+        if contains(_states, .MoveToDeliverOre) {
+            self.states.append(MoveToDeliverOre())
+        }
+        if contains(_states, .DeliverOre) {
+            self.states.append(DeliverOre())
+        }
+        if contains(_states, .BuildAutos) {
+            self.states.append(BuildAutos())
         }
         
         self.name = "FSM\(FSMCount)"
@@ -155,7 +169,6 @@ class FSM {
     }
     
     func update() {
-        
         if self.isActive && self.target != nil {
             switchToHighestPriorityState()
             if self.currentState != nil {

@@ -14,6 +14,7 @@ var minerNameCount: Int = 0
 class Miner: Auto {
     
     var oreAmount: CGFloat = 0
+    var oreMaxCapacity: CGFloat = minerOreMaxCapacity
     var mineAmount = minerMineAmount
     var isMining: Bool = false
     var oreDepositsInContactWith = [OreDeposit]()
@@ -33,6 +34,7 @@ class Miner: Auto {
         self.name! += "miner\(minerNameCount)"
         
         self.type = .Miner
+        self.oreCost = minerOreCost
         self.health = minerHealth
         self.maxHealth = minerHealth
         self.energy = minerEnergy
@@ -42,8 +44,8 @@ class Miner: Auto {
         self.sightRadius = minerSightRadius
         
         self.sightNode = SKShapeNode(circleOfRadius: self.sightRadius!)
-        self.sightNode.fillColor = sightNodeFillColor
-        self.sightNode.strokeColor = sightNodeStrokeColor
+        self.sightNode!.fillColor = sightNodeFillColor
+        self.sightNode!.strokeColor = sightNodeStrokeColor
         
         self.chassisNode = SKSpriteNode(imageNamed: "MinerChassis")
         self.chassisNode.setScale(autosScale)
@@ -51,7 +53,7 @@ class Miner: Auto {
         self.mobilityNode = SKSpriteNode(imageNamed: "Wheels")
         self.mobilityNode.setScale(autosScale)
         
-        self.sightNode.zPosition = 1
+        self.sightNode!.zPosition = 1
         self.mobilityNode.zPosition = 2
         self.chassisNode.zPosition = 3
         self.drillNode.zPosition = 4
@@ -60,17 +62,17 @@ class Miner: Auto {
         self.bodyNode.physicsBody?.affectedByGravity = false
         self.bodyNode.physicsBody?.categoryBitMask = physicsCategory.Auto.rawValue
         self.bodyNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
-        self.bodyNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Structure.rawValue
+        self.bodyNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Ore.rawValue
         
-        self.sightNode.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
-        self.sightNode.physicsBody?.affectedByGravity = false
-        self.sightNode.physicsBody?.categoryBitMask = physicsCategory.Sight.rawValue
-        self.sightNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
-        self.sightNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Projectile.rawValue
+        self.sightNode!.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
+        self.sightNode!.physicsBody?.affectedByGravity = false
+        self.sightNode!.physicsBody?.categoryBitMask = physicsCategory.Sight.rawValue
+        self.sightNode!.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
+        self.sightNode!.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Ore.rawValue
         
         
         self.addChild(self.bodyNode)
-        self.addChild(self.sightNode)
+        self.addChild(self.sightNode!)
         self.addChild(self.healthBar)
         self.bodyNode.addChild(mobilityNode)
         self.bodyNode.addChild(chassisNode)
@@ -98,20 +100,43 @@ class Miner: Auto {
         self.runAction(actionWaitAndRemoveSpark)
     }
     
-    func mine(oreDeposit: OreDeposit) {
-        let keyMining = "mining"
-        
-        if self.isMining == false && oreDeposit.amount > 0{
-            self.isMining = true
-            
-            if oreDeposit.amount < self.mineAmount {
+    func transferOre(oreDeposit: OreDeposit) {
+        if oreDeposit.amount < self.mineAmount {
+            if oreDeposit.amount > self.oreMaxCapacity - self.oreAmount {
+                oreDeposit.amount -= self.oreMaxCapacity - self.oreAmount
+                self.oreAmount = self.oreMaxCapacity
+            }
+            else {
                 self.oreAmount += oreDeposit.amount
                 oreDeposit.mine(oreDeposit.amount)
+            }
+        }
+        else {
+            if self.mineAmount > self.oreMaxCapacity - self.oreAmount {
+                oreDeposit.amount -= self.oreMaxCapacity - self.oreAmount
+                self.oreAmount = self.oreMaxCapacity
             }
             else {
                 oreDeposit.mine(self.mineAmount)
                 self.oreAmount += self.mineAmount
             }
+        }
+    }
+    
+    func mine(oreDeposit: OreDeposit) {
+        let keyMining = "mining"
+        
+        if self.isMining == false && oreDeposit.amount > 0 && self.oreAmount/self.oreMaxCapacity < 1.0{
+            self.isMining = true
+            
+//            if oreDeposit.amount < self.mineAmount {
+//                self.oreAmount += oreDeposit.amount
+//                oreDeposit.mine(oreDeposit.amount)
+//            }
+//            else {
+//                oreDeposit.mine(self.mineAmount)
+//                self.oreAmount += self.mineAmount
+//            }
             
             let drillMovementDuration: NSTimeInterval = 2.0
             let drillMoveDistance = self.chassisNode.frame.height/2
@@ -121,7 +146,14 @@ class Miner: Auto {
             
             let actionDrillSequence = SKAction.sequence([SKAction.runBlock({self.makeSparkEmitter()}), actionMoveDrillForward, actionMoveDrillBack])
             
-            self.drillNode.runAction(actionDrillSequence, completion: {self.isMining = false})
+            self.drillNode.runAction(actionDrillSequence, completion: {self.isMining = false; self.transferOre(oreDeposit)})
+        }
+    }
+    
+    func depositOre(HQ: Headquarters) {
+        if HQ.team.name == self.team.name {
+            HQ.team.depositOre(self.oreAmount)
+            self.oreAmount = 0
         }
     }
     

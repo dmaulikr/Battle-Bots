@@ -27,6 +27,8 @@ class Headquarters: Structure {
         headquartersNameCount += 1
         self.name! += "headQuarters\(headquartersNameCount)"
         
+        self.fsm = FSM(_states: HQStates)
+        
         layer_1.setScale(structuresScale)
         layer_2.setScale(structuresScale)
         
@@ -59,6 +61,10 @@ class Headquarters: Structure {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func update() {
+        super.update()
+    }
+    
     override func takeDamage(amount: CGFloat) {
         super.takeDamage(amount)
         self.layer_1.runAction(actionTakeDamage)
@@ -74,6 +80,13 @@ class Headquarters: Structure {
             }
         }
         super.destroy()
+    }
+    
+    func buildAuto(type: autoType) {
+        if self.team.oreAmount >= getOreCostOfAutoType(type) {
+            makeAuto(self.world, self.team, self.position, type)
+            self.team.oreAmount -= getOreCostOfAutoType(type)
+        }
     }
     
     
