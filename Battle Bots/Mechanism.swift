@@ -213,6 +213,14 @@ class Mechanism: SKNode {
         }
     }
     
+    func showAsSelected() {
+        
+    }
+    
+    func deselect() {
+        
+    }
+    
     func doAdditionalSetUp() {
         //Sets up the team and fsm of the mechanism
         self.addToTeam()

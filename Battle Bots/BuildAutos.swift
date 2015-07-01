@@ -72,6 +72,10 @@ class BuildAutos: State {
                 self.autoTypeToBuild = .Miner
                 return true
             }
+            else if autos[autoType.Engineer] == nil || autos[autoType.Engineer]?.count <= i {
+                self.autoTypeToBuild = .Engineer
+                return true
+            }
             else if autos[autoType.LightArmor] == nil || autos[autoType.LightArmor]?.count <= i {
                 self.autoTypeToBuild = .LightArmor
                 return true
@@ -90,10 +94,6 @@ class BuildAutos: State {
             }
             else if autos[autoType.ScatterShot] == nil || autos[autoType.ScatterShot]?.count <= i {
                 self.autoTypeToBuild = .ScatterShot
-                return true
-            }
-            else if autos[autoType.Engineer] == nil || autos[autoType.Engineer]?.count <= i {
-                self.autoTypeToBuild = .Engineer
                 return true
             }
             else if autos[autoType.Artillery] == nil || autos[autoType.Artillery]?.count <= i {

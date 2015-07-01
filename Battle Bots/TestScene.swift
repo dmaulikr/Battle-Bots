@@ -193,6 +193,24 @@ class TestScene: GameScene {
         self.makeSightNodesHidden(true)
     }
     
+//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        for touch in (touches as! Set<UITouch>) {
+//            touchController?.addTouch(touch)
+//        }
+//    }
+//    
+//    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        for touch in (touches as! Set<UITouch>) {
+//            touchController?.touchMoved(touch)
+//        }
+//    }
+//    
+//    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        for touch in (touches as! Set<UITouch>) {
+//            touchController?.removeTouch(touch)
+//        }
+//    }
+    
     
     
 }

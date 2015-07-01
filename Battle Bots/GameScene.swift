@@ -8,6 +8,10 @@
 
 import SpriteKit
 
+let worldName = "world"
+let cameraName = "camera"
+let overlayName = "overlay"
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Touches
@@ -27,9 +31,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var overlay: SKNode?
     // The camera. Move this node to change what parts of the world are visible.
     var camera: SKNode?
-    let worldName = "world"
-    let cameraName = "camera"
-    let overlayName = "overlay"
+    
+    var touchController: TouchController?
     
     var doorTransition: DoorTransition?
     
@@ -59,6 +62,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.overlay?.zPosition = 10
         self.overlay?.name = overlayName
         addChild(self.overlay!)
+        
+        //TouchController Setup
+        touchController = TouchController(world: world!)
         
         //Transition setup
         self.doorTransition = DoorTransition(type: .Horizontal, scene: self, initialState: .Open)
@@ -110,71 +116,86 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return mechanisms[find(mechanismDistances,minElement(mechanismDistances))!]
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        /* Called when a touch begins */
-        
-//        world?.enumerateChildNodesWithName("\(mechanismName)*") {
-//            node, stop in
-//            if let miner = node as? Miner {
-//                let ore = self.world?.childNodeWithName("ore1") as! OreDeposit
-//                miner.mine(ore)
+//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        /* Called when a touch begins */
+//        
+////        for touch in (touches as! Set<UITouch>) {
+////            currentTouches.append(touch)
+////            if currentTouches.count >= 3 {
+////                doDoorTransition(1)
+////            }
+////            
+////            var location = touch.locationInNode(world)
+////            initialTouchLocation = touch.locationInNode(self)
+////        }
+//        
+//        for touch in (touches as! Set<UITouch>) {
+//            
+//        
+//        }
+//    }
+//    
+//    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        for touch in (touches as! Set<UITouch>) {
+//            var location = touch.locationInNode(world)
+//            endTouchLocation = touch.locationInNode(self)
+//            
+//            if contains(currentTouches, touch) {
+//                currentTouches.removeAtIndex(find(currentTouches,touch)!)
+//            }
+//        
+//            let distance = getDistance(initialTouchLocation!, endTouchLocation!)
+//            if distance > 30 {
+//                if world?.xScale < 50 && world?.xScale > 0.1 {
+//                    if distance >= 10 {
+//                        let distX = endTouchLocation!.x - initialTouchLocation!.x
+//                        let distY = endTouchLocation!.y - initialTouchLocation!.y
+//                        if abs(distY) > 10 {
+//                            var newScale = world!.xScale - distY/100
+//                            if newScale < 0.5 {
+//                                newScale = 0.5
+//                            }
+//                            else if newScale > 3 {
+//                                newScale = 3
+//                            }
+//                            world?.runAction(SKAction.scaleTo(newScale, duration: 0.2), withKey: "scaling")
+//                        }
+//                    }
+//                }
+//            }
+//            else {
+//                let nearestMechanism = findNearestMechanism(location)
+//                if getDistance(nearestMechanism.position, location) <= 50 {
+//                    shouldFollowMechanism = true
+//                    mechanismToFollowName = nearestMechanism.name!
+//                }
+//                else{
+//                    shouldFollowMechanism = false
+//                    camera?.position = location
+//                    centerOnNode(camera!, immediately: false)
+//                }
 //            }
 //        }
-        
+//    }
+
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in (touches as! Set<UITouch>) {
-            currentTouches.append(touch)
-            if currentTouches.count >= 3 {
-                doDoorTransition(1)
-            }
-            
-            var location = touch.locationInNode(world)
-            initialTouchLocation = touch.locationInNode(self)
+            touchController?.addTouch(touch)
+        }
+    }
+    
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        for touch in (touches as! Set<UITouch>) {
+            touchController?.touchMoved(touch)
         }
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in (touches as! Set<UITouch>) {
-            var location = touch.locationInNode(world)
-            endTouchLocation = touch.locationInNode(self)
-            
-            if contains(currentTouches, touch) {
-                currentTouches.removeAtIndex(find(currentTouches,touch)!)
-            }
-        
-            let distance = getDistance(initialTouchLocation!, endTouchLocation!)
-            if distance > 30 {
-                if world?.xScale < 50 && world?.xScale > 0.1 {
-                    if distance >= 10 {
-                        let distX = endTouchLocation!.x - initialTouchLocation!.x
-                        let distY = endTouchLocation!.y - initialTouchLocation!.y
-                        if abs(distY) > 10 {
-                            var newScale = world!.xScale - distY/100
-                            if newScale < 0.5 {
-                                newScale = 0.5
-                            }
-                            else if newScale > 3 {
-                                newScale = 3
-                            }
-                            world?.runAction(SKAction.scaleTo(newScale, duration: 0.2), withKey: "scaling")
-                        }
-                    }
-                }
-            }
-            else {
-                let nearestMechanism = findNearestMechanism(location)
-                if getDistance(nearestMechanism.position, location) <= 50 {
-                    shouldFollowMechanism = true
-                    mechanismToFollowName = nearestMechanism.name!
-                }
-                else{
-                    shouldFollowMechanism = false
-                    camera?.position = location
-                    centerOnNode(camera!, immediately: false)
-                }
-            }
+            touchController?.removeTouch(touch)
         }
     }
-
    
     
     override func update(currentTime: CFTimeInterval) {
@@ -185,23 +206,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             updateProjectiles()
         }
         
-        if world?.actionForKey("scaling") != nil {
-            if shouldFollowMechanism {
-                if let mechanism = world?.childNodeWithName(mechanismToFollowName!) as? Mechanism {
-                    centerOnNode(mechanism, immediately: true)
-                }
-            }
-            else {
-                centerOnNode(camera!, immediately: true)
-            }
-        }
-        else {
-            if shouldFollowMechanism {
-                if let mechanism = world?.childNodeWithName(mechanismToFollowName!) as? Mechanism {
-                    centerOnNode(mechanism, immediately: false)
-                }
-            }
-        }
+        self.touchController?.update()
+//        if world?.actionForKey("scaling") != nil {
+//            if shouldFollowMechanism {
+//                if let mechanism = world?.childNodeWithName(mechanismToFollowName!) as? Mechanism {
+//                    centerOnNode(mechanism, immediately: true)
+//                }
+//            }
+//            else {
+//                centerOnNode(camera!, immediately: true)
+//            }
+//        }
+//        else {
+//            if shouldFollowMechanism {
+//                if let mechanism = world?.childNodeWithName(mechanismToFollowName!) as? Mechanism {
+//                    centerOnNode(mechanism, immediately: false)
+//                }
+//            }
+//        }
         
     }
     
@@ -399,6 +421,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     miner.didCollideWithOreDeposit(oreDeposit)
                 }
             }
+        case physicsCategory.Selection.rawValue | physicsCategory.Auto.rawValue:
+            if contact.bodyA.node != nil && contact.bodyB.node != nil {
+                var selectionNode: SelectionNode
+                var auto: Auto
+                if contact.bodyA.categoryBitMask == physicsCategory.Selection.rawValue {
+                    selectionNode = contact.bodyA.node?.parent as! SelectionNode
+                    auto = contact.bodyB.node?.parent as! Auto
+                } else {
+                    selectionNode = contact.bodyB.node?.parent as! SelectionNode
+                    auto = contact.bodyA.node?.parent as! Auto
+                }
+            
+                selectionNode.didCollideWithAuto(auto)
+            }
         default:
             otherContact()
             // Nobody expects this, so satisfy the compiler and catch
@@ -502,6 +538,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if let miner = mechanism as? Miner {
                     miner.didEndCollisionWithOreDeposit(oreDeposit)
                 }
+            }
+        case physicsCategory.Selection.rawValue | physicsCategory.Auto.rawValue:
+            if contact.bodyA.node != nil && contact.bodyB.node != nil {
+                var selectionNode: SelectionNode
+                var auto: Auto
+                if contact.bodyA.categoryBitMask == physicsCategory.Selection.rawValue {
+                    selectionNode = contact.bodyA.node?.parent as! SelectionNode
+                    auto = contact.bodyB.node?.parent as! Auto
+                } else {
+                    selectionNode = contact.bodyB.node?.parent as! SelectionNode
+                    auto = contact.bodyA.node?.parent as! Auto
+                }
+                
+                selectionNode.didEndCollisionWithAuto(auto)
             }
         default:
             otherContact()

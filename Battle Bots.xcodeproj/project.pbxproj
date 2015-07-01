@@ -88,6 +88,8 @@
 		70E108631B2C08D8005ED353 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E108611B2C08D8005ED353 /* LaunchScreen.xib */; };
 		70E108651B2C0906005ED353 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E108641B2C0906005ED353 /* Default-568h@2x.png */; };
 		70E108671B2C0A27005ED353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E108661B2C0A27005ED353 /* AppDelegate.swift */; };
+		70EBDA161B38BA26008602BA /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EBDA151B38BA26008602BA /* TouchController.swift */; };
+		70FC3F381B41F98B00310FFC /* SelectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC3F371B41F98B00310FFC /* SelectionNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,8 @@
 		70E108611B2C08D8005ED353 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		70E108641B2C0906005ED353 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		70E108661B2C0A27005ED353 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70EBDA151B38BA26008602BA /* TouchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
+		70FC3F371B41F98B00310FFC /* SelectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				70E108661B2C0A27005ED353 /* AppDelegate.swift */,
+				70EBDA151B38BA26008602BA /* TouchController.swift */,
+				70FC3F371B41F98B00310FFC /* SelectionNode.swift */,
 				70E107A41B2C05C0005ED353 /* GameViewController.swift */,
 				70E107941B2C05C0005ED353 /* Boundary.swift */,
 				70E107A51B2C05C0005ED353 /* General.swift */,
@@ -434,12 +440,10 @@
 		70E108261B2C072F005ED353 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				70E107C91B2C05C0005ED353 /* TestScene.swift */,
-				70E107CB1B2C05C0005ED353 /* Tutorial.swift */,
 				70E108271B2C0749005ED353 /* SKS Files */,
-				70E107AC1B2C05C0005ED353 /* LevelSelectScene.swift */,
 				70E107B21B2C05C0005ED353 /* MenuScene.swift */,
-				70E107A31B2C05C0005ED353 /* GameScene.swift */,
+				70E107AC1B2C05C0005ED353 /* LevelSelectScene.swift */,
+				70EBDA141B38B9B4008602BA /* GameScene */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -453,6 +457,16 @@
 				70E107CA1B2C05C0005ED353 /* Tutorial.sks */,
 			);
 			name = "SKS Files";
+			sourceTree = "<group>";
+		};
+		70EBDA141B38B9B4008602BA /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				70E107A31B2C05C0005ED353 /* GameScene.swift */,
+				70E107C91B2C05C0005ED353 /* TestScene.swift */,
+				70E107CB1B2C05C0005ED353 /* Tutorial.swift */,
+			);
+			name = GameScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -618,6 +632,7 @@
 				70E107D51B2C05C0005ED353 /* BulletExplosion.swift in Sources */,
 				70E107F51B2C05C0005ED353 /* MoveToKnownEnemy.swift in Sources */,
 				701EBDF61B2D63DD003D5796 /* DeliverOre.swift in Sources */,
+				70FC3F381B41F98B00310FFC /* SelectionNode.swift in Sources */,
 				70E107F21B2C05C0005ED353 /* MenuScene.swift in Sources */,
 				70E1081C1B2C05CE005ED353 /* Scout.swift in Sources */,
 				70E107D21B2C05C0005ED353 /* AutoExplosion.swift in Sources */,
@@ -628,6 +643,7 @@
 				70E107EF1B2C05C0005ED353 /* MechanismAspects.swift in Sources */,
 				70E107EE1B2C05C0005ED353 /* MachineGunner.swift in Sources */,
 				70E107FE1B2C05C0005ED353 /* RepairUnit.swift in Sources */,
+				70EBDA161B38BA26008602BA /* TouchController.swift in Sources */,
 				70E107DE1B2C05C0005ED353 /* Explosion.swift in Sources */,
 				70E107F71B2C05C0005ED353 /* MoveToWeakUnit.swift in Sources */,
 				70E107FA1B2C05C0005ED353 /* OreDeposit.swift in Sources */,

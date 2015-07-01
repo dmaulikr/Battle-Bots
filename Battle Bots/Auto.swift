@@ -33,6 +33,7 @@ class Auto: Mechanism {
     var chassisNode = SKSpriteNode()
     var mobilityNode = SKSpriteNode()
     var healthBar = HealthBar(type: .Auto)
+    var indicatorNode: SKShapeNode?
     
 //    var sightNode = SKShapeNode()
     
@@ -54,6 +55,11 @@ class Auto: Mechanism {
         super.update()
         loseEnergy()
         self.healthBar.update(self.health, maxHealth: self.maxHealth, energy: self.energy!, maxEnergy: self.maxEnergy!)
+        self.reposition()
+    }
+    
+    func reposition() {
+        self.bodyNode.position = CGPoint(x: 0, y: 0)
     }
     
     func loseEnergy() {
@@ -134,6 +140,40 @@ class Auto: Mechanism {
                     spriteNode.runAction(actionTakeDamage, withKey: keyTakeDamage)
                 }
             }
+        }
+    }
+    
+    override func showAsSelected() {
+        super.showAsSelected()
+        self.changeIndicatorNodeTo(.Selected)
+    }
+    
+    override func deselect() {
+        super.deselect()
+        self.changeIndicatorNodeTo(.None)
+    }
+    
+    func changeIndicatorNodeTo(type: indicatorType) {
+        if self.indicatorNode != nil {
+            self.indicatorNode?.removeFromParent()
+        }
+        switch type {
+        case .None:
+            self.indicatorNode = nil
+        case .Selected:
+            self.indicatorNode = SKShapeNode(circleOfRadius: 4)
+            self.indicatorNode?.fillColor = colorIndicatorSelected
+            self.indicatorNode?.strokeColor = SKColor.clearColor()
+        case .Target:
+            self.indicatorNode = SKShapeNode(circleOfRadius: 4)
+            self.indicatorNode?.fillColor = colorIndicatorTarget
+            self.indicatorNode?.strokeColor = SKColor.clearColor()
+        }
+        
+        if self.indicatorNode != nil {
+            self.addChild(self.indicatorNode!)
+            self.indicatorNode!.position = CGPoint(x: 0, y: self.healthBar.position.y + self.indicatorNode!.frame.height)
+            self.indicatorNode?.zPosition = 20
         }
     }
     

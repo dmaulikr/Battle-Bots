@@ -27,15 +27,24 @@ let oreScaleHuge:CGFloat = 0.75
 //Colors
 let sightNodeFillColor = SKColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 0.05)
 let sightNodeStrokeColor = SKColor.grayColor()
+let selectionNodeFillColor = SKColor(red: 20/255, green: 20/255, blue: 200/255, alpha: 0.2)
+let selectionNodeStrokeColor = SKColor(red: 20/255, green: 20/255, blue: 255/255, alpha: 0.5)
+
+let colorIndicatorSelected = SKColor(red: 20/255, green: 20/255, blue: 255/255, alpha: 0.50)
+let colorIndicatorTarget = SKColor(red: 255/255, green: 20/255, blue: 20/255, alpha: 0.50)
 
 let colorHeal = SKColor.greenColor()
 let colorRecharge = SKColor.yellowColor()
 let colorMenuBackground = SKColor(red: 220/255, green: 210/255, blue: 180/255, alpha: 1.0)
+let colorSelected = SKColor.blueColor()
 
 //SKActions
 let repairDuration: NSTimeInterval = 0.5
 let rechargeDuration: NSTimeInterval = 0.5
+let selectionDuration: NSTimeInterval = 0.1
 
+let actionDeselect = SKAction.colorizeWithColor(colorSelected, colorBlendFactor: 0.0, duration: selectionDuration)
+let actionSelect = SKAction.colorizeWithColor(colorSelected, colorBlendFactor: 0.5, duration: selectionDuration)
 let actionButtonPress = SKAction.sequence([SKAction.scaleTo(1.1, duration: 0.2),SKAction.scaleTo(1.0, duration: 0.2)])
 let actionRotateDish = SKAction.repeatActionForever(SKAction.rotateByAngle(CGFloat(M_2_PI), duration: 0.5))
 let actionRepairAuto = SKAction.sequence([SKAction.group([SKAction.colorizeWithColor(colorHeal, colorBlendFactor: 0.5, duration: repairDuration/2), SKAction.scaleTo(1.1, duration: repairDuration/2)]),SKAction.group([SKAction.colorizeWithColor(colorHeal, colorBlendFactor: 0.0, duration: repairDuration/2), SKAction.scaleTo(1.0, duration: repairDuration/2)])])
@@ -48,17 +57,35 @@ let actionRechargeAuto = SKAction.sequence([SKAction.group([SKAction.colorizeWit
 let keyButtonPress = "buttonPress"
 let keyRotateDish = "rotateDish"
 let keyRotateTowardsPoint = "rotateTowardsPoint"
+let keyRotate = "rotate"
 let keyMoveTo = "moveTo"
 let keyRepair = "repair"
 let keyBulletFiring = "bulletFiring"
 let keyExplosionFade = "explosionFade"
 let keyRecharge = "recharge"
 let keyTakeDamage = "takeDamage"
+let keyCentering = "centering"
+let keySelect = "Select"
+let keyDeselect = "Deselect"
 
 //Strings and Names
 let mechanismName = "mechanism"
 
+//Collisions
+let autoCollisionBitMask = physicsCategory.None.rawValue
+
+//TouchController
+let minimumZoomScale: CGFloat = 0.3
+let maximumZoomScale: CGFloat = 1.8
+
+
 //Enum
+
+enum indicatorType {
+    case None
+    case Selected
+    case Target
+}
 
 enum doorType {
     case Horizontal
@@ -68,6 +95,14 @@ enum doorType {
 enum doorState {
     case Closed
     case Open
+}
+
+enum touchControllerState {
+    case Idle
+    case isZooming
+    case isMovingView
+    case isSelecting
+    case hasSelected
 }
 
 enum oreSize {
@@ -119,6 +154,7 @@ enum physicsCategory: UInt32 {
     case Sight = 16
     case Explosion = 32
     case Ore = 64
+    case Selection = 128
     //case Shield = 128
 }
 
@@ -236,6 +272,8 @@ func getOreCostOfAutoType(type: autoType) -> CGFloat {
         return medicOreCost
     case .Artillery:
         return artilleryOreCost
+    case .Engineer:
+        return engineerOreCost
     default:
         fatalError("ERROR: Unknown autoType '\(type)' in 'getOreCostOfAutoType'")
     }
@@ -258,6 +296,8 @@ func makeAuto(world: World, team: Team, position: CGPoint, type: autoType) {
         auto = Miner(team: team, world: world)
     case .Medic:
         auto = Medic(team: team, world: world)
+    case .Engineer:
+        auto = Engineer(team: team, world: world)
     default:
         fatalError("ERROR: Unknown autoType '\(type)' in 'makeAuto' function")
     }

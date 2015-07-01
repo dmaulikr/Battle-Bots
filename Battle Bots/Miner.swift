@@ -61,7 +61,7 @@ class Miner: Auto {
         self.bodyNode.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: chassisNode.frame.width, height: chassisNode.frame.height))
         self.bodyNode.physicsBody?.affectedByGravity = false
         self.bodyNode.physicsBody?.categoryBitMask = physicsCategory.Auto.rawValue
-        self.bodyNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
+        self.bodyNode.physicsBody?.collisionBitMask = autoCollisionBitMask
         self.bodyNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Ore.rawValue
         
         self.sightNode!.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)

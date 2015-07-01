@@ -19,6 +19,7 @@ let engineerEnergy: CGFloat = 100
 let engineerSightRadius: CGFloat = 50
 let engineerBaseSpeed: CGFloat = 50
 let engineerBaseRotateSpeed: CGFloat = 2
+let engineerToolRotateSpeed: CGFloat = 2
 let engineerStates: [stateType] = [.Wander, .NeedRepair, .Repairing, .NeedCharge, .Recharge]
 
 //Scout

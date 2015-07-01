@@ -63,7 +63,7 @@ class LightArmor: WeaponizedAuto {
         self.sightNode!.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
         self.sightNode!.physicsBody?.affectedByGravity = false
         self.sightNode!.physicsBody?.categoryBitMask = physicsCategory.Sight.rawValue
-        self.sightNode!.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
+        self.sightNode!.physicsBody?.collisionBitMask = autoCollisionBitMask
         self.sightNode!.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Structure.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Ore.rawValue
         
         

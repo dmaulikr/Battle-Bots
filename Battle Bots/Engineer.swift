@@ -13,8 +13,14 @@ var engineerNameCount: Int = 0
 
 class Engineer: Auto {
     
+    
+    var toolNode: SKSpriteNode
+    var toolRotateSpeed: CGFloat = engineerToolRotateSpeed
+    
     override init(team: Team, world: World) {
-
+        
+        self.toolNode = SKSpriteNode(imageNamed: "EngineerTool")
+        self.toolNode.setScale(autosScale)
         
         super.init(team: team, world: world)
         
@@ -31,6 +37,7 @@ class Engineer: Auto {
         self.maxEnergy = engineerEnergy
         self.baseSpeed = engineerBaseSpeed
         self.baseRotateSpeed = engineerBaseRotateSpeed
+        self.toolRotateSpeed = engineerToolRotateSpeed
         self.sightRadius = engineerSightRadius
         
         self.sightNode = SKShapeNode(circleOfRadius: self.sightRadius!)
@@ -46,11 +53,12 @@ class Engineer: Auto {
         self.sightNode!.zPosition = 1
         self.mobilityNode.zPosition = 2
         self.chassisNode.zPosition = 3
+        self.toolNode.zPosition = 4
         
         self.bodyNode.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: chassisNode.frame.width, height: chassisNode.frame.height))
         self.bodyNode.physicsBody?.affectedByGravity = false
         self.bodyNode.physicsBody?.categoryBitMask = physicsCategory.Auto.rawValue
-        self.bodyNode.physicsBody?.collisionBitMask = physicsCategory.None.rawValue
+        self.bodyNode.physicsBody?.collisionBitMask = autoCollisionBitMask
         self.bodyNode.physicsBody?.contactTestBitMask = physicsCategory.Auto.rawValue | physicsCategory.Projectile.rawValue | physicsCategory.Structure.rawValue
         
         self.sightNode!.physicsBody = SKPhysicsBody(circleOfRadius: self.sightRadius!)
@@ -65,6 +73,7 @@ class Engineer: Auto {
         self.addChild(self.healthBar)
         self.bodyNode.addChild(mobilityNode)
         self.bodyNode.addChild(chassisNode)
+        self.bodyNode.addChild(toolNode)
 
         
     }
@@ -75,7 +84,37 @@ class Engineer: Auto {
     
     override func update() {
         super.update()
+        self.doIdleRotation()
     }
+    
+    func getActionPointToolTowardsPosition(point: CGPoint) -> SKAction {
+        let actionRotate = getActionRotateNodeTowardsPoint(self.toolNode, self.world.convertPoint(point, toNode: self.toolNode.parent!), self.toolRotateSpeed)
+        return actionRotate
+    }
+    
+    func rotateToolTowardsPoint(point: CGPoint) {
+        let actionRotate = self.getActionPointToolTowardsPosition(point)
+        self.toolNode.runAction(actionRotate, withKey: keyRotate)
+    }
+    
+    func rotateToolToAngle(angle: CGFloat, duration: NSTimeInterval) {
+        if self.toolNode.actionForKey(keyRotate) == nil {
+            let actionRotate = SKAction.rotateToAngle(angle, duration: duration)
+            self.toolNode.runAction(actionRotate, withKey: keyRotate)
+        }
+    }
+    
+    func doIdleRotation() {
+        if self.toolNode.actionForKey(keyRotate) == nil {
+            if self.toolNode.zRotation <= 0 {
+                self.rotateToolToAngle(CGFloat(M_PI_4), duration: 2)
+            }
+            else {
+                self.rotateToolToAngle(CGFloat(-M_PI_4), duration: 4)
+            }
+        }
+    }
+    
     
     
 }
